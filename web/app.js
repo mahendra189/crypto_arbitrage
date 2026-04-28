@@ -35,7 +35,7 @@ function updateOpportunities(opportunities) {
     tbody.innerHTML = '';
     
     if (opportunities.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; color: var(--text-secondary)">Waiting for market data...</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; color: var(--text-secondary)">Waiting for market data...</td></tr>';
         return;
     }
 
@@ -54,7 +54,7 @@ function updateOpportunities(opportunities) {
             netProfit = opp.profit_pct !== undefined ? opp.profit_pct : 0;
         } else if (opp.type === 'funding_rate') {
             typeBadge = '<span class="badge badge-funding">FUND</span>';
-            grossProfit = opp.gross_yield_8h !== undefined ? opp.gross_yield_8h * 100 : 0;
+            grossProfit = opp.raw_profit !== undefined ? opp.raw_profit : 0;
             netProfit = opp.net_profit !== undefined ? opp.net_profit : 0;
         } else if (opp.type === 'statistical') {
             typeBadge = '<span class="badge badge-stat">STAT</span>';
@@ -68,7 +68,6 @@ function updateOpportunities(opportunities) {
 
         const paperReturn = opp.paper_return_pct !== undefined ? opp.paper_return_pct : 0;
         const estPnl = opp.paper_estimated_pnl_usdt !== undefined ? opp.paper_estimated_pnl_usdt : 0;
-        const conf = opp.confidence !== undefined ? (opp.confidence * 100).toFixed(0) + '%' : '-';
 
         const grossClass = grossProfit > 0 ? 'profit-positive' : 'profit-negative';
         const netClass = netProfit > 0 ? 'profit-positive' : 'profit-negative';
@@ -83,7 +82,6 @@ function updateOpportunities(opportunities) {
             <td class="${netClass}">${(netProfit > 0 ? '+' : '') + netProfit.toFixed(3)}%</td>
             <td class="${returnClass}">${(paperReturn > 0 ? '+' : '') + paperReturn.toFixed(3)}%</td>
             <td class="${pnlClass}">${(estPnl > 0 ? '+' : '') + '$' + estPnl.toFixed(2)}</td>
-            <td>${conf}</td>
         `;
         tbody.appendChild(tr);
     });

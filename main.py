@@ -30,12 +30,13 @@ class Config:
         self.per_hop_cost = self.fee + self.slippage
         self.withdrawal_fee_usdt = 0.5
 
-        # Opportunity quality filters (Lowered for Testing/Demonstration)
-        self.min_profit_threshold = -0.05       # Allow up to 5% loss theoretically 
-        self.cross_broker_min_profit = -0.05    # Show cross broker even if it loses money
-        self.min_display_profit_pct = -0.05     # Show triangular even if negative
-        self.min_confidence = 0.1               # Show very low confidence
-        self.min_estimated_pnl_usdt = -50.0
+        # Opportunity quality filters
+        self.min_profit_threshold = 0.01
+        self.cross_broker_min_profit = 0.0001   # 0.01% in decimal
+        self.min_display_profit_pct = 0.01
+        self.max_display_profit_pct = 1.0
+        self.min_confidence = 0.1
+        self.min_estimated_pnl_usdt = 0.0
 
         # Scan cadence
         self.scan_interval = 2
@@ -74,8 +75,8 @@ class Config:
 
         # Funding-rate arbitrage
         self.enable_funding_arb = True
-        self.funding_rate_threshold = 0.0       # Show ALL funding rates
-        self.min_funding_period_profit_pct = -0.5
+        self.funding_rate_threshold = 0.0
+        self.min_funding_period_profit_pct = 0.01
         self.max_funding_basis_pct = 5.0
 
         # Paper trading

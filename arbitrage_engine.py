@@ -449,7 +449,7 @@ class ArbitrageDetector:
             estimated_pnl_usdt = allocation_usdt * (realistic_return_pct / 100.0)
             min_return_pct = self._minimum_return_pct(opportunity)
 
-            if realistic_return_pct < min_return_pct:
+            if realistic_return_pct < min_return_pct or realistic_return_pct > getattr(self.config, "max_display_profit_pct", 1.0):
                 continue
             if confidence < self.config.min_confidence:
                 continue
