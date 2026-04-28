@@ -204,6 +204,7 @@ class ArbitrageDetector:
             "logs": [],
             "live_prices": {},
             "network_graph": {},
+            "predictions": {},
             "broker_status": {},
             "paper_account": None,
             "timestamp": time.time(),
@@ -226,6 +227,7 @@ class ArbitrageDetector:
             snapshot["logs"] = list(self.latest_snapshot.get("logs", []))
             snapshot["live_prices"] = dict(self.latest_snapshot.get("live_prices", {}))
             snapshot["network_graph"] = dict(self.latest_snapshot.get("network_graph", {}))
+            snapshot["predictions"] = dict(self.latest_snapshot.get("predictions", {}))
             snapshot["broker_status"] = dict(self.latest_snapshot.get("broker_status", {}))
 
         snapshot["paper_account"] = paper_state if paper_state is not None else self._paper_state()
@@ -268,6 +270,7 @@ class ArbitrageDetector:
                 opportunities=cached.get("top_opportunities", []),
                 live_prices=cached.get("live_prices", {}),
                 network_graph=cached.get("network_graph", {}),
+                predictions=cached.get("predictions", {}),
                 broker_status=self.cross_broker.get_broker_status(),
                 scan_state="degraded",
                 errors=errors,
@@ -322,10 +325,12 @@ class ArbitrageDetector:
 
         scan_state = "live" if not errors else "degraded"
         network_graph = self.graph.build_graph(spot_data)
+        predictions = self._calculate_predictions()
         self._publish_snapshot(
             opportunities=ranked,
             live_prices=live_prices,
             network_graph=network_graph,
+            predictions=predictions,
             broker_status=self.cross_broker.get_broker_status(),
             scan_state=scan_state,
             errors=errors,
@@ -346,6 +351,42 @@ class ArbitrageDetector:
         for symbol, history in self.price_history.items():
             if symbol in price_map:
                 history.append(price_map[symbol])
+
+    def _calculate_predictions(self):
+        predictions = {}
+        for symbol, history in self.price_history.items():
+            if len(history) < 10:
+                continue
+                
+            prices = list(history)
+            current = prices[-1]
+            old = prices[0]
+            
+            # Rate of change over the tracked window
+            change_pct = ((current - old) / old) * 100 if old > 0 else 0
+            
+            # AI/Momentum Trend
+            trend = "NEUTRAL"
+            if change_pct > 0.05:
+                trend = "BULLISH"
+            elif change_pct < -0.05:
+                trend = "BEARISH"
+                
+            # Volatility (approx std dev / mean)
+            mean = sum(prices) / len(prices)
+            variance = sum((p - mean) ** 2 for p in prices) / len(prices)
+            volatility = (math.sqrt(variance) / mean) * 100 if mean > 0 else 0
+            
+            # Simple Linear Extrapolation for predicted next price
+            predicted_next = current * (1 + (change_pct / 100))
+            
+            predictions[symbol] = {
+                "trend": trend,
+                "change_pct": round(change_pct, 4),
+                "volatility": round(volatility, 4),
+                "predicted_next": round(predicted_next, 4)
+            }
+        return predictions
 
     def _detect_stat_arb(self):
         opportunities = []
@@ -567,6 +608,7 @@ class ArbitrageDetector:
         opportunities,
         live_prices,
         network_graph,
+        predictions,
         broker_status,
         scan_state,
         errors,
@@ -579,6 +621,7 @@ class ArbitrageDetector:
             "logs": list(self.logger.history),
             "live_prices": dict(live_prices),
             "network_graph": dict(network_graph),
+            "predictions": dict(predictions),
             "broker_status": dict(broker_status),
             "paper_account": self._paper_state(),
             "timestamp": scan_finished_at,

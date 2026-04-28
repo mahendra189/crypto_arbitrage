@@ -12,6 +12,9 @@ async function fetchData() {
         if (data.network_graph) {
             updateNetworkGraph(data.network_graph);
         }
+        if (data.predictions) {
+            updatePredictions(data.predictions);
+        }
 
         if (data.live_prices) {
             updateIndices(data.live_prices);
@@ -231,4 +234,52 @@ function updateNetworkGraph(graphData) {
         // For edges, we just update the title (rate) so it stays real-time
         networkEdges.update(edgesList.map(e => ({ id: e.id, title: e.title })));
     }
+}
+
+// ── Market Predictions ───────────────────────────────────────────────────────
+function updatePredictions(predictions) {
+    const container = document.getElementById('predictions-container');
+    if (!container || !predictions) return;
+
+    let html = '';
+    
+    // Sort by volatility (most volatile first)
+    const sorted = Object.entries(predictions).sort((a, b) => b[1].volatility - a[1].volatility);
+
+    if (sorted.length === 0) {
+        container.innerHTML = '<div style="text-align:center; color: var(--text-secondary); margin-top: 2rem;">Collecting market data...</div>';
+        return;
+    }
+
+    sorted.forEach(([symbol, data]) => {
+        const trendColor = data.trend === 'BULLISH' ? 'var(--neon-green)' : (data.trend === 'BEARISH' ? 'var(--neon-red)' : 'var(--text-secondary)');
+        const pctColor = data.change_pct > 0 ? 'var(--neon-green)' : (data.change_pct < 0 ? 'var(--neon-red)' : 'var(--text-secondary)');
+        const pctPrefix = data.change_pct > 0 ? '+' : '';
+        
+        let priceStr = data.predicted_next;
+        if (priceStr < 1) priceStr = priceStr.toFixed(5);
+        else if (priceStr < 100) priceStr = priceStr.toFixed(3);
+        else priceStr = priceStr.toFixed(2);
+
+        html += `
+            <div style="background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.05); padding: 0.75rem; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                    <span style="font-weight: 600; color: var(--neon-blue);">${symbol.replace('USDT', '')}</span>
+                    <span style="font-weight: bold; font-size: 0.75rem; color: ${trendColor}; border: 1px solid ${trendColor}; padding: 2px 6px; border-radius: 4px;">
+                        ${data.trend}
+                    </span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-secondary);">
+                    <span>Volatility: ${data.volatility.toFixed(2)}%</span>
+                    <span style="color: ${pctColor}">${pctPrefix}${data.change_pct.toFixed(2)}%</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-top: 0.3rem;">
+                    <span>Next Expected:</span>
+                    <span style="color: var(--text-primary); font-family: 'JetBrains Mono', monospace;">$${priceStr}</span>
+                </div>
+            </div>
+        `;
+    });
+
+    container.innerHTML = html;
 }

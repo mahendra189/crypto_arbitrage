@@ -28,9 +28,17 @@
             </div>
         </div>
 
-        <div class="glass-panel" style="margin-bottom: 2rem; height: 400px; padding: 1rem; position: relative;">
-            <h3 style="text-align: center; margin-top: 0; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 1rem;">Real-Time Arbitrage Graph</h3>
-            <div id="network-graph" style="width: 100%; height: calc(100% - 30px);"></div>
+        <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+            <div class="glass-panel" style="flex: 2; height: 400px; padding: 1rem; position: relative;">
+                <h3 style="text-align: center; margin-top: 0; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 1rem;">Real-Time Arbitrage Graph</h3>
+                <div id="network-graph" style="width: 100%; height: calc(100% - 30px);"></div>
+            </div>
+            <div class="glass-panel" style="flex: 1; height: 400px; padding: 1rem; position: relative; overflow-y: auto;">
+                <h3 style="text-align: center; margin-top: 0; margin-bottom: 0.5rem; color: var(--neon-purple); font-size: 1rem; text-shadow: 0 0 5px rgba(139, 92, 246, 0.3);">Real-Time Market AI</h3>
+                <div id="predictions-container" style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
         </div>
 
         <div class="grid-layout">

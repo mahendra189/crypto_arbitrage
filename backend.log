@@ -7,42 +7,18 @@
  * Running on http://127.0.0.1:5000
  * Running on http://10.20.19.254:5000
 [33mPress CTRL+C to quit[0m
-127.0.0.1 - - [28/Apr/2026 14:25:34] "GET /data.json?t=1777366534844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:36] "GET /data.json?t=1777366536345 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:37] "GET /data.json?t=1777366537844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:39] "GET /data.json?t=1777366539344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:40] "GET /data.json?t=1777366540845 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:42] "GET /data.json?t=1777366542344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:43] "GET /data.json?t=1777366543845 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:45] "GET /data.json?t=1777366545344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:46] "GET /data.json?t=1777366546844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:48] "GET /data.json?t=1777366548344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:49] "GET /data.json?t=1777366549844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:51] "GET /data.json?t=1777366551344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:52] "GET /data.json?t=1777366552844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:54] "GET /data.json?t=1777366554345 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:55] "GET /data.json?t=1777366555844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:56] "GET /data.json HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:57] "GET /data.json?t=1777366557344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:25:58] "GET /data.json?t=1777366558844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:00] "GET /data.json?t=1777366560344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:01] "GET /data.json?t=1777366561844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:03] "GET /data.json?t=1777366563345 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:04] "GET /data.json?t=1777366564844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:06] "GET /data.json?t=1777366566344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:07] "GET /data.json?t=1777366567844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:09] "GET /data.json?t=1777366569344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:10] "GET /data.json?t=1777366570844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:12] "GET /data.json?t=1777366572344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:13] "GET /data.json?t=1777366573844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:15] "GET /data.json?t=1777366575343 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:16] "GET /data.json?t=1777366576844 HTTP/1.1" 200 -
-[DEBUG] Binance: 3577 tickers
-[DEBUG] Bybit: 9 tickers
+127.0.0.1 - - [28/Apr/2026 14:35:24] "GET /data.json?t=1777367124801 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:35:44] "GET /data.json?t=1777367144543 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:35:44] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:35:44] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 14:35:44] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:35:45] "GET /data.json?t=1777367145345 HTTP/1.1" 200 -
 [DEBUG] HTX: 9 tickers
-[DEBUG] Kraken: 1730 tickers
+[DEBUG] Bybit: 9 tickers
 [DEBUG] KuCoin: 9 tickers
 [DEBUG] Bitget: 9 tickers
+[DEBUG] Binance: 3577 tickers
+[DEBUG] Kraken: 1730 tickers
 [DEBUG] BinanceUS: 619 tickers
 [DEBUG] Coinbase: 6 tickers
 [DEBUG] GateIO: 9 tickers
@@ -56,19 +32,19 @@
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
   1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0124%  |  Est PnL: $+0.12  |  Conf: 10%
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
 
 --------------------------------------------------------------------------------
   Summary: funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0124% | $+0.12
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
 [INFO] === Scanning all arbitrage strategies ===
+[DEBUG] HTX: 9 tickers
 [DEBUG] Bybit: 9 tickers
-[DEBUG] Binance: 3577 tickers
 [DEBUG] Bitget: 9 tickers
 [DEBUG] KuCoin: 9 tickers
+[DEBUG] Binance: 3577 tickers
 [DEBUG] Kraken: 1730 tickers
-[DEBUG] HTX: 9 tickers
 [DEBUG] BinanceUS: 619 tickers
 [DEBUG] Coinbase: 6 tickers
 [DEBUG] GateIO: 9 tickers
@@ -82,39 +58,12 @@
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
   1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0124%  |  Est PnL: $+0.12  |  Conf: 10%
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
 
 --------------------------------------------------------------------------------
   Summary: funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0124% | $+0.12
-[INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Binance: 3577 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] Kraken: 1730 tickers
-[DEBUG] Coinbase: 6 tickers
-[GateIO] HTTPSConnectionPool(host='api.gateio.ws', port=443): Read timed out. (read timeout=10)
-[WARNING] GateIO: no data
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
-[INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
-
-================================================================================
-  TOP REALISTIC ARBITRAGE OPPORTUNITIES
-================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0124%  |  Est PnL: $+0.12  |  Conf: 10%
-
---------------------------------------------------------------------------------
-  Summary: funding_rate: 1
-================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0124% | $+0.12
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
 [INFO] === Scanning all arbitrage strategies ===
 [DEBUG] HTX: 9 tickers
 [DEBUG] Bybit: 9 tickers
@@ -135,18 +84,306 @@
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
   1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0124%  |  Est PnL: $+0.12  |  Conf: 10%
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
 
 --------------------------------------------------------------------------------
   Summary: funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0124% | $+0.12
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[INFO] === Scanning all arbitrage strategies ===
+[DEBUG] HTX: 9 tickers
+[DEBUG] Bitget: 9 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] KuCoin: 9 tickers
+[DEBUG] Kraken: 1730 tickers
+[DEBUG] Bybit: 9 tickers
+[DEBUG] Binance: 3577 tickers
+[DEBUG] Coinbase: 6 tickers
+[DEBUG] GateIO: 9 tickers
+[INFO]   Multi-hop cycles (Triangular): 0
+[INFO]   Cross-exchange (Simultaneous): 0
+[INFO]   Spatial Arbitrage (Transfer): 0
+[INFO]   Statistical arb: 0
+[INFO]   Funding rate arb: 1
+
+================================================================================
+  TOP REALISTIC ARBITRAGE OPPORTUNITIES
+================================================================================
+  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+
+--------------------------------------------------------------------------------
+  Summary: funding_rate: 1
+================================================================================
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[INFO] === Scanning all arbitrage strategies ===
+[DEBUG] HTX: 9 tickers
+[DEBUG] Bybit: 9 tickers
+[DEBUG] Bitget: 9 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] Binance: 3577 tickers
+[DEBUG] KuCoin: 9 tickers
+[DEBUG] Coinbase: 6 tickers
+[DEBUG] Kraken: 1730 tickers
+[DEBUG] GateIO: 9 tickers
+[INFO]   Multi-hop cycles (Triangular): 0
+[INFO]   Cross-exchange (Simultaneous): 0
+[INFO]   Spatial Arbitrage (Transfer): 0
+[INFO]   Statistical arb: 0
+[INFO]   Funding rate arb: 1
+
+================================================================================
+  TOP REALISTIC ARBITRAGE OPPORTUNITIES
+================================================================================
+  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+
+--------------------------------------------------------------------------------
+  Summary: funding_rate: 1
+================================================================================
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[INFO] === Scanning all arbitrage strategies ===
+[DEBUG] HTX: 9 tickers
+[DEBUG] Bybit: 9 tickers
+[DEBUG] Bitget: 9 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] KuCoin: 9 tickers
+[DEBUG] Binance: 3577 tickers
+[DEBUG] Kraken: 1730 tickers
+[DEBUG] Coinbase: 6 tickers
+[DEBUG] GateIO: 9 tickers
+[INFO]   Multi-hop cycles (Triangular): 0
+[INFO]   Cross-exchange (Simultaneous): 0
+[INFO]   Spatial Arbitrage (Transfer): 0
+[INFO]   Statistical arb: 0
+[INFO]   Funding rate arb: 1
+
+================================================================================
+  TOP REALISTIC ARBITRAGE OPPORTUNITIES
+================================================================================
+  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+
+--------------------------------------------------------------------------------
+  Summary: funding_rate: 1
+================================================================================
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[INFO] === Scanning all arbitrage strategies ===
+[DEBUG] HTX: 9 tickers
+[DEBUG] Bybit: 9 tickers
+[DEBUG] Binance: 3577 tickers
+[DEBUG] Bitget: 9 tickers
+[DEBUG] KuCoin: 9 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] Kraken: 1730 tickers
+[DEBUG] Coinbase: 6 tickers
+[DEBUG] GateIO: 9 tickers
+[INFO]   Multi-hop cycles (Triangular): 0
+[INFO]   Cross-exchange (Simultaneous): 0
+[INFO]   Spatial Arbitrage (Transfer): 0
+[INFO]   Statistical arb: 0
+[INFO]   Funding rate arb: 1
+
+================================================================================
+  TOP REALISTIC ARBITRAGE OPPORTUNITIES
+================================================================================
+  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+
+--------------------------------------------------------------------------------
+  Summary: funding_rate: 1
+================================================================================
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[INFO] === Scanning all arbitrage strategies ===
+[DEBUG] HTX: 9 tickers
+[DEBUG] Bitget: 9 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] Binance: 3577 tickers
+[DEBUG] Bybit: 9 tickers
+[DEBUG] Kraken: 1730 tickers
+[DEBUG] KuCoin: 9 tickers
+[DEBUG] Coinbase: 6 tickers
+[DEBUG] GateIO: 9 tickers
+[INFO]   Multi-hop cycles (Triangular): 0
+[INFO]   Cross-exchange (Simultaneous): 0
+[INFO]   Spatial Arbitrage (Transfer): 0
+[INFO]   Statistical arb: 0
+[INFO]   Funding rate arb: 1
+
+================================================================================
+  TOP REALISTIC ARBITRAGE OPPORTUNITIES
+================================================================================
+  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot127.0.0.1 - - [28/Apr/2026 14:35:46] "GET /data.json?t=1777367146846 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:35:48] "GET /data.json?t=1777367148347 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:35:49] "GET /data.json?t=1777367149846 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:35:51] "GET /data.json?t=1777367151346 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:35:52] "GET /data.json?t=1777367152847 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:35:54] "GET /data.json?t=1777367154346 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:35:55] "GET /data.json?t=1777367155846 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:35:57] "GET /data.json?t=1777367157345 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:35:58] "GET /data.json?t=1777367158846 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:00] "GET /data.json?t=1777367160345 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:01] "GET /data.json?t=1777367161845 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:03] "GET /data.json?t=1777367163347 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:04] "GET /data.json?t=1777367164846 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:06] "GET /data.json?t=1777367166347 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:07] "GET /data.json?t=1777367167846 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:09] "GET /data.json?t=1777367169345 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:10] "GET /data.json?t=1777367170845 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:12] "GET /data.json?t=1777367172346 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:13] "GET /data.json?t=1777367173845 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:15] "GET /data.json?t=1777367175345 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:16] "GET /data.json?t=1777367176845 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:18] "GET /data.json?t=1777367178353 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:19] "GET /data.json?t=1777367179846 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:21] "GET /data.json?t=1777367181345 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:22] "GET /data.json?t=1777367182846 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:24] "GET /data.json?t=1777367184345 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:25] "GET /data.json?t=1777367185845 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:27] "GET /data.json?t=1777367187345 HTTP/1.1" 200 -
+
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+
+--------------------------------------------------------------------------------
+  Summary: funding_rate: 1
+================================================================================
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[INFO] === Scanning all arbitrage strategies ===
+[DEBUG] HTX: 9 tickers
+[DEBUG] Bybit: 9 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] Bitget: 9 tickers
+[DEBUG] KuCoin: 9 tickers
+[DEBUG] Kraken: 1730 tickers
+[DEBUG] Binance: 3577 tickers
+[DEBUG] Coinbase: 6 tickers
+[DEBUG] GateIO: 9 tickers
+[INFO]   Multi-hop cycles (Triangular): 0
+[INFO]   Cross-exchange (Simultaneous): 0
+[INFO]   Spatial Arbitrage (Transfer): 0
+[INFO]   Statistical arb: 0
+[INFO]   Funding rate arb: 1
+
+================================================================================
+  TOP REALISTIC ARBITRAGE OPPORTUNITIES
+================================================================================
+  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+
+--------------------------------------------------------------------------------
+  Summary: funding_rate: 1
+================================================================================
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[INFO] === Scanning all arbitrage strategies ===
+[DEBUG] HTX: 9 tickers
+[DEBUG] Bybit: 9 tickers
+[DEBUG] Binance: 3577 tickers
+[DEBUG] Bitget: 9 tickers
+[DEBUG] KuCoin: 9 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] Kraken: 1730 tickers
+[DEBUG] Coinbase: 6 tickers
+[DEBUG] GateIO: 9 tickers
+[INFO]   Multi-hop cycles (Triangular): 0
+[INFO]   Cross-exchange (Simultaneous): 0
+[INFO]   Spatial Arbitrage (Transfer): 0
+[INFO]   Statistical arb: 0
+[INFO]   Funding rate arb: 1
+
+================================================================================
+  TOP REALISTIC ARBITRAGE OPPORTUNITIES
+================================================================================
+  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+
+--------------------------------------------------------------------------------
+  Summary: funding_rate: 1
+================================================================================
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[INFO] === Scanning all arbitrage strategies ===
+[DEBUG] HTX: 9 tickers
+[DEBUG] Bybit: 9 tickers
+[DEBUG] Bitget: 9 tickers
+[DEBUG] KuCoin: 9 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] Binance: 3577 tickers
+[DEBUG] Kraken: 1730 tickers
+[DEBUG] Coinbase: 6 tickers
+[DEBUG] GateIO: 9 tickers
+[INFO]   Multi-hop cycles (Triangular): 0
+[INFO]   Cross-exchange (Simultaneous): 0
+[INFO]   Spatial Arbitrage (Transfer): 0
+[INFO]   Statistical arb: 0
+[INFO]   Funding rate arb: 1
+
+================================================================================
+  TOP REALISTIC ARBITRAGE OPPORTUNITIES
+================================================================================
+  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+
+--------------------------------------------------------------------------------
+  Summary: funding_rate: 1
+================================================================================
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[INFO] === Scanning all arbitrage strategies ===
+[DEBUG] HTX: 9 tickers
+[DEBUG] Bybit: 9 tickers
+[DEBUG] Bitget: 9 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] KuCoin: 9 tickers
+[DEBUG] Binance: 3577 tickers
+[DEBUG] Kraken: 1730 tickers
+[DEBUG] Coinbase: 6 tickers
+[DEBUG] GateIO: 9 tickers
+[INFO]   Multi-hop cycles (Triangular): 0
+[INFO]   Cross-exchange (Simultaneous): 0
+[INFO]   Spatial Arbitrage (Transfer): 0
+[INFO]   Statistical arb: 0
+[INFO]   Funding rate arb: 1
+
+================================================================================
+  TOP REALISTIC ARBITRAGE OPPORTUNITIES
+================================================================================
+  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+
+--------------------------------------------------------------------------------
+  Summary: funding_rate: 1
+================================================================================
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[INFO] === Scanning all arbitrage strategies ===
+[DEBUG] HTX: 9 tickers
+[DEBUG] Bitget: 9 tickers
+[DEBUG] Bybit: 9 tickers
+[DEBUG] KuCoin: 9 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] Binance: 3577 tickers
+[DEBUG] Kraken: 1730 tickers
+[DEBUG] Coinbase: 6 tickers
+[DEBUG] GateIO: 9 tickers
+[INFO]   Multi-hop cycles (Triangular): 0
+[INFO]   Cross-exchange (Simultaneous): 0
+[INFO]   Spatial Arbitrage (Transfer): 0
+[INFO]   Statistical arb: 0
+[INFO]   Funding rate arb: 1
+
+================================================================================
+  TOP REALISTIC ARBITRAGE OPPORTUNITIES
+================================================================================
+  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+
+--------------------------------------------------------------------------------
+  Summary: funding_rate: 1
+================================================================================
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
 [INFO] === Scanning all arbitrage strategies ===
 [DEBUG] Bybit: 9 tickers
 [DEBUG] Binance: 3577 tickers
 [DEBUG] Bitget: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
 [DEBUG] KuCoin: 9 tickers
+[DEBUG] BinanceUS: 619 tickers
 [DEBUG] Kraken: 1730 tickers
 [DEBUG] HTX: 9 tickers
 [DEBUG] Coinbase: 6 tickers
@@ -161,19 +398,19 @@
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
   1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0124%  |  Est PnL: $+0.12  |  Conf: 10%
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
 
 --------------------------------------------------------------------------------
   Summary: funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0124% | $+0.12
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
 [DEBUG] Bybit: 9 tickers
 [DEBUG] Binance: 3577 tickers
 [DEBUG] Bitget: 9 tickers
-[DEBUG] KuCoin: 9 tickers
+[DEBUG] HTX: 9 tickers
 [DEBUG] BinanceUS: 619 tickers
+[DEBUG] KuCoin: 9 tickers
 [DEBUG] Kraken: 1730 tickers
 [DEBUG] Coinbase: 6 tickers
 [DEBUG] GateIO: 9 tickers
@@ -187,88 +424,33 @@
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
   1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0124%  |  Est PnL: $+0.12  |  Conf: 10%
+     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
 
 --------------------------------------------------------------------------------
   Summary: funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0124% | $+0.12
+[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
 [INFO] === Scanning all arbitrage strategies ===
 [DEBUG] HTX: 9 tickers
 [DEBUG] Bybit: 9 tickers
-[DEBUG] Binance: 3577 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] Kraken: 1730 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
-[INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
-
-================================================================================
-  TOP REALISTIC ARBITRAGE OPPORTUNITIES
-================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0124%  |  Est PnL: $+0.12  |  Conf: 10%
-
---------------------------------------------------------------------------------
-  Summary: funding_rate: 1
-================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0124% | $+0.12
-[INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Kraken: 1730 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Binance: 3577 tickers
 [DEBUG] Bitget: 9 tickers
 [DEBUG] KuCoin: 9 tickers
 [DEBUG] BinanceUS: 619 tickers
+[DEBUG] Binance: 3577 tickers
+[DEBUG] Kraken: 1730 tickers
 [DEBUG] Coinbase: 6 tickers
 [DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
-[INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
-
-================================================================================
-  TOP REALISTIC ARBITRAGE OPPORTUNITIES
-================================================================================127.0.0.1 - - [28/Apr/2026 14:26:18] "GET /data.json?t=1777366578344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:19] "GET /data.json?t=1777366579843 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:21] "GET /data.json?t=1777366581343 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:22] "GET /data.json?t=1777366582843 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:24] "GET /data.json?t=1777366584344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:25] "GET /data.json?t=1777366585844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:27] "GET /data.json?t=1777366587344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:28] "GET /data.json?t=1777366588844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:30] "GET /data.json?t=1777366590343 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:31] "GET /data.json?t=1777366591844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:33] "GET /data.json?t=1777366593344 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:33] "[36mGET / HTTP/1.1[0m" 304 -
-127.0.0.1 - - [28/Apr/2026 14:26:33] "[36mGET /styles.css HTTP/1.1[0m" 304 -
-127.0.0.1 - - [28/Apr/2026 14:26:33] "[36mGET /app.js HTTP/1.1[0m" 304 -
-127.0.0.1 - - [28/Apr/2026 14:26:33] "GET /data.json?t=1777366593982 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:35] "[36mGET / HTTP/1.1[0m" 304 -
-127.0.0.1 - - [28/Apr/2026 14:26:35] "[36mGET /app.js HTTP/1.1[0m" 304 -
-127.0.0.1 - - [28/Apr/2026 14:26:35] "[36mGET /styles.css HTTP/1.1[0m" 304 -
-127.0.0.1 - - [28/Apr/2026 14:26:35] "GET /data.json?t=1777366595260 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:36] "GET /data.json?t=1777366596761 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:38] "GET /data.json?t=1777366598261 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:39] "GET /data.json?t=1777366599761 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:41] "GET /data.json?t=1777366601262 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:42] "GET /data.json?t=1777366602761 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:44] "GET /data.json?t=1777366604261 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:45] "GET /data.json?t=1777366605761 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:47] "GET /data.json?t=1777366607261 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:48] "GET /data.json?t=1777366608761 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:50] "GET /data.json?t=1777366610261 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:51] "GET /data.json?t=1777366611761 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:53] "GET /data.json?t=1777366613261 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:54] "GET /data.json?t=1777366614761 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:56] "GET /data.json?t=1777366616262 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:57] "GET /data.json?t=1777366617761 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:26:59] "GET /data.json?t=1777366619262 HTTP/1.1" 200 -
+[INFO]   Multi-hop cycles (Triangular): 0127.0.0.1 - - [28/Apr/2026 14:36:28] "GET /data.json?t=1777367188844 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:30] "GET /data.json?t=1777367190345 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:31] "GET /data.json?t=1777367191846 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:33] "GET /data.json?t=1777367193346 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:33] "[36mGET / HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 14:36:33] "[36mGET /app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 14:36:33] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 14:36:33] "GET /data.json?t=1777367193513 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:35] "GET /data.json?t=1777367195014 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:36] "GET /data.json?t=1777367196514 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:38] "GET /data.json?t=1777367198014 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:39] "GET /data.json?t=1777367199514 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:41] "GET /data.json?t=1777367201014 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 14:36:42] "GET /data.json?t=1777367202514 HTTP/1.1" 200 -
