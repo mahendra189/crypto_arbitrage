@@ -35,74 +35,56 @@ function updateOpportunities(opportunities) {
     tbody.innerHTML = '';
     
     if (opportunities.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; color: var(--text-secondary)">Waiting for market data...</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; color: var(--text-secondary)">Waiting for market data...</td></tr>';
         return;
     }
 
     opportunities.forEach((opp, index) => {
         let typeBadge = '';
-        let profitDisplay = '';
+        let grossProfit = 0;
+        let netProfit = 0;
         
         if (opp.type === 'triangular') {
             typeBadge = '<span class="badge badge-triangular">TRI</span>';
-            const netClass = opp.net_profit > 0 ? 'profit-positive' : 'profit-negative';
-            profitDisplay = `
-                <td class="${netClass}">${(opp.net_profit > 0 ? '+' : '') + opp.net_profit.toFixed(3)}%</td>
-            `;
+            grossProfit = opp.raw_profit !== undefined ? opp.raw_profit : 0;
+            netProfit = opp.net_profit !== undefined ? opp.net_profit : 0;
         } else if (opp.type === 'cross_broker') {
             typeBadge = '<span class="badge badge-cross">CROSS</span>';
-            const grossProfitClass = opp.gross_profit_pct > 0 ? 'profit-positive' : 'profit-negative';
-            const netProfitClass = opp.profit_pct > 0 ? 'profit-positive' : 'profit-negative';
-            
-            profitDisplay = `
-                <td class="${grossProfitClass}">${(opp.gross_profit_pct > 0 ? '+' : '') + opp.gross_profit_pct.toFixed(3)}%</td>
-                <td class="${netProfitClass}">${(opp.profit_pct > 0 ? '+' : '') + opp.profit_pct.toFixed(3)}%</td>
-            `;
+            grossProfit = opp.gross_profit_pct !== undefined ? opp.gross_profit_pct : 0;
+            netProfit = opp.profit_pct !== undefined ? opp.profit_pct : 0;
         } else if (opp.type === 'funding_rate') {
             typeBadge = '<span class="badge badge-funding">FUND</span>';
-            const grossProfitClass = opp.gross_yield_8h > 0 ? 'profit-positive' : 'profit-negative';
-            const netProfitClass = opp.net_profit > 0 ? 'profit-positive' : 'profit-negative';
-            
-            profitDisplay = `
-                <td class="${grossProfitClass}">${(opp.gross_yield_8h * 100).toFixed(3)}%</td>
-                <td class="${netProfitClass}">${(opp.net_profit > 0 ? '+' : '') + opp.net_profit.toFixed(3)}%</td>
-            `;
-        }
-        
-        // For triangular arbitrage, show same value in both columns
-        let grossPnLDisplay = '';
-        let netPnLDisplay = '';
-        
-        if (opp.type === 'triangular') {
-            const netClass = opp.net_profit > 0 ? 'profit-positive' : 'profit-negative';
-            grossPnLDisplay = `<td class="${netClass}">${(opp.net_profit > 0 ? '+' : '') + opp.net_profit.toFixed(3)}%</td>`;
-            netPnLDisplay = `<td class="${netClass}">${(opp.net_profit > 0 ? '+' : '') + opp.net_profit.toFixed(3)}%</td>`;
-        } else if (opp.type === 'cross_broker' || opp.type === 'funding_rate') {
-            // Already handled in profitDisplay above
-            grossPnLDisplay = '';
-            netPnLDisplay = '';
+            grossProfit = opp.gross_yield_8h !== undefined ? opp.gross_yield_8h * 100 : 0;
+            netProfit = opp.net_profit !== undefined ? opp.net_profit : 0;
+        } else if (opp.type === 'statistical') {
+            typeBadge = '<span class="badge badge-stat">STAT</span>';
+            grossProfit = opp.raw_profit !== undefined ? opp.raw_profit : 0;
+            netProfit = opp.net_profit !== undefined ? opp.net_profit : 0;
         } else {
-            grossPnLDisplay = `<td class="profit-negative">-</td>`;
-            netPnLDisplay = `<td class="profit-negative">-</td>`;
+            typeBadge = `<span class="badge badge-cross">${opp.type.toUpperCase()}</span>`;
+            grossProfit = opp.raw_profit !== undefined ? opp.raw_profit : 0;
+            netProfit = opp.net_profit !== undefined ? opp.net_profit : 0;
         }
-        
+
+        const paperReturn = opp.paper_return_pct !== undefined ? opp.paper_return_pct : 0;
+        const estPnl = opp.paper_estimated_pnl_usdt !== undefined ? opp.paper_estimated_pnl_usdt : 0;
+        const conf = opp.confidence !== undefined ? (opp.confidence * 100).toFixed(0) + '%' : '-';
+
+        const grossClass = grossProfit > 0 ? 'profit-positive' : 'profit-negative';
+        const netClass = netProfit > 0 ? 'profit-positive' : 'profit-negative';
+        const returnClass = paperReturn > 0 ? 'profit-positive' : 'profit-negative';
+        const pnlClass = estPnl > 0 ? 'profit-positive' : 'profit-negative';
+
         const tr = document.createElement('tr');
-        if (opp.type === 'triangular') {
-            tr.innerHTML = `
-                <td>${index + 1}</td>
-                <td>${typeBadge} ${opp.path.replace(/→/g, '<span style="color:#475569">→</span>')}</td>
-                ${profitDisplay}
-                ${grossPnLDisplay}
-                ${netPnLDisplay}
-            `;
-        } else {
-            tr.innerHTML = `
-                <td>${index + 1}</td>
-                <td>${typeBadge} ${opp.path.replace(/→/g, '<span style="color:#475569">→</span>')}</td>
-                <td>-</td>
-                ${profitDisplay}
-            `;
-        }
+        tr.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${typeBadge} ${opp.path.replace(/→/g, '<span style="color:#475569">→</span>')}</td>
+            <td class="${grossClass}">${(grossProfit > 0 ? '+' : '') + grossProfit.toFixed(3)}%</td>
+            <td class="${netClass}">${(netProfit > 0 ? '+' : '') + netProfit.toFixed(3)}%</td>
+            <td class="${returnClass}">${(paperReturn > 0 ? '+' : '') + paperReturn.toFixed(3)}%</td>
+            <td class="${pnlClass}">${(estPnl > 0 ? '+' : '') + '$' + estPnl.toFixed(2)}</td>
+            <td>${conf}</td>
+        `;
         tbody.appendChild(tr);
     });
 }
