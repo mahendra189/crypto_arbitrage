@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Arbitrage Engine Live</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="glass-header">
+            <div class="logo">Crypto <span class="neon-text">Arbitrage</span> Dashboard</div>
+            <div id="market-indices" class="market-indices"></div>
+            <div class="status-indicator">
+                Scanner Running <div class="pulse-dot"></div>
+            </div>
+        </header>
+
+        <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+            <div class="glass-panel" style="flex: 1; height: auto; padding: 1rem 2rem;">
+                <div style="display: flex; justify-content: space-around; font-weight: bold; color: var(--neon-blue);">
+                    <div>Triangular: <span id="count-triangular" style="color: var(--text-primary);">0</span></div>
+                    <div>Cross-Broker/Spatial: <span id="count-cross" style="color: var(--text-primary);">0</span></div>
+                    <div>Statistical: <span id="count-stat" style="color: var(--text-primary);">0</span></div>
+                    <div>Funding Rate: <span id="count-funding" style="color: var(--text-primary);">0</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-layout">
+            <div class="glass-panel">
+                <h2>Live Opportunities Found</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Arbitrage Path</th>
+                                <th>Gross Profit %</th>
+                                <th>Net Profit %</th>
+                                <th>Expected ROI %</th>
+                            </tr>
+                        </thead>
+                        <tbody id="opp-list">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="glass-panel">
+                <h2>Execution Console</h2>
+                <div id="log-console" class="console">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
