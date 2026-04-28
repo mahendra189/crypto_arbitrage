@@ -12,8 +12,11 @@
         <header class="glass-header">
             <div class="logo">Crypto <span class="neon-text">Arbitrage</span> Dashboard</div>
             <div id="market-indices" class="market-indices"></div>
-            <div class="status-indicator">
-                Scanner Running <div class="pulse-dot"></div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button id="toggle-scanner-btn" onclick="toggleScanner()" class="nav-btn" style="background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.5); color: var(--neon-blue); cursor: pointer;">Pause Scanner</button>
+                <div class="status-indicator" id="scanner-status">
+                    Scanner Running <div class="pulse-dot" id="scanner-pulse"></div>
+                </div>
             </div>
         </header>
 

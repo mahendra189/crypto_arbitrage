@@ -19,8 +19,48 @@ async function fetchData() {
         if (data.live_prices) {
             updateIndices(data.live_prices);
         }
+        
+        updateScannerStatus(data.scan_state || 'live');
     } catch (error) {
         console.error('Error fetching data:', error);
+    }
+}
+
+// ── Scanner Control ──────────────────────────────────────────────────────────
+async function toggleScanner() {
+    try {
+        const res = await fetch('/api/scanner/toggle', { method: 'POST' });
+        const data = await res.json();
+        const btn = document.getElementById('toggle-scanner-btn');
+        if (data.running) {
+            btn.textContent = 'Pause Scanner';
+            btn.style.color = 'var(--neon-blue)';
+            btn.style.borderColor = 'rgba(14, 165, 233, 0.5)';
+        } else {
+            btn.textContent = 'Start Scanner';
+            btn.style.color = 'var(--neon-green)';
+            btn.style.borderColor = 'rgba(16, 185, 129, 0.5)';
+        }
+        // Force immediate fetch to update status
+        fetchData();
+    } catch (err) {
+        console.error('Toggle failed:', err);
+    }
+}
+
+function updateScannerStatus(state) {
+    const statusDiv = document.getElementById('scanner-status');
+    const pulseDiv = document.getElementById('scanner-pulse');
+    
+    if (state === 'paused') {
+        statusDiv.style.color = 'var(--text-secondary)';
+        statusDiv.innerHTML = 'Scanner Paused <div class="pulse-dot" id="scanner-pulse" style="background-color: var(--text-secondary); box-shadow: none; animation: none;"></div>';
+    } else if (state === 'degraded') {
+        statusDiv.style.color = 'var(--neon-red)';
+        statusDiv.innerHTML = 'Scanner Degraded <div class="pulse-dot" id="scanner-pulse" style="background-color: var(--neon-red); box-shadow: 0 0 10px var(--neon-red);"></div>';
+    } else {
+        statusDiv.style.color = 'var(--neon-green)';
+        statusDiv.innerHTML = 'Scanner Running <div class="pulse-dot" id="scanner-pulse"></div>';
     }
 }
 

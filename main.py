@@ -167,6 +167,16 @@ def reset_paper():
     SERVICES["paper_trader"].reset()
     return jsonify({"ok": True, "account": SERVICES["paper_trader"].get_state()})
 
+@app.route("/api/scanner/toggle", methods=["POST"])
+def toggle_scanner():
+    current = SERVICES.get("scanner_running", True)
+    SERVICES["scanner_running"] = not current
+    if not current:
+        SERVICES["detector"].latest_snapshot["scan_state"] = "live"
+    else:
+        SERVICES["detector"].latest_snapshot["scan_state"] = "paused"
+    return jsonify({"ok": True, "running": not current})
+
 
 @app.route("/<path:filename>")
 def serve_static(filename):
@@ -176,7 +186,8 @@ def serve_static(filename):
 def run_scanner(detector, config):
     while True:
         try:
-            detector.scan()
+            if SERVICES.get("scanner_running", True):
+                detector.scan()
         except KeyboardInterrupt:
             break
         except Exception as exc:
@@ -197,6 +208,7 @@ def main():
 
     SERVICES["detector"] = detector
     SERVICES["paper_trader"] = paper_trader
+    SERVICES["scanner_running"] = True
 
     logger.info(f"Starting arbitrage scanner + web server on port {PORT}...")
 
