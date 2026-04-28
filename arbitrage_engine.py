@@ -203,6 +203,7 @@ class ArbitrageDetector:
             "top_opportunities": [],
             "logs": [],
             "live_prices": {},
+            "network_graph": {},
             "broker_status": {},
             "paper_account": None,
             "timestamp": time.time(),
@@ -224,6 +225,7 @@ class ArbitrageDetector:
             snapshot["top_opportunities"] = [dict(item) for item in self.latest_snapshot.get("top_opportunities", [])]
             snapshot["logs"] = list(self.latest_snapshot.get("logs", []))
             snapshot["live_prices"] = dict(self.latest_snapshot.get("live_prices", {}))
+            snapshot["network_graph"] = dict(self.latest_snapshot.get("network_graph", {}))
             snapshot["broker_status"] = dict(self.latest_snapshot.get("broker_status", {}))
 
         snapshot["paper_account"] = paper_state if paper_state is not None else self._paper_state()
@@ -240,6 +242,7 @@ class ArbitrageDetector:
         self._publish_snapshot(
             opportunities=cached.get("top_opportunities", []),
             live_prices=cached.get("live_prices", {}),
+            network_graph=cached.get("network_graph", {}),
             broker_status=cached.get("broker_status", {}),
             scan_state="degraded",
             errors=[message],
@@ -264,6 +267,7 @@ class ArbitrageDetector:
             self._publish_snapshot(
                 opportunities=cached.get("top_opportunities", []),
                 live_prices=cached.get("live_prices", {}),
+                network_graph=cached.get("network_graph", {}),
                 broker_status=self.cross_broker.get_broker_status(),
                 scan_state="degraded",
                 errors=errors,
@@ -317,9 +321,11 @@ class ArbitrageDetector:
         self._display(ranked)
 
         scan_state = "live" if not errors else "degraded"
+        network_graph = self.graph.build_graph(spot_data)
         self._publish_snapshot(
             opportunities=ranked,
             live_prices=live_prices,
+            network_graph=network_graph,
             broker_status=self.cross_broker.get_broker_status(),
             scan_state=scan_state,
             errors=errors,
@@ -560,6 +566,7 @@ class ArbitrageDetector:
         self,
         opportunities,
         live_prices,
+        network_graph,
         broker_status,
         scan_state,
         errors,
@@ -571,6 +578,7 @@ class ArbitrageDetector:
             "top_opportunities": [dict(item) for item in opportunities],
             "logs": list(self.logger.history),
             "live_prices": dict(live_prices),
+            "network_graph": dict(network_graph),
             "broker_status": dict(broker_status),
             "paper_account": self._paper_state(),
             "timestamp": scan_finished_at,

@@ -8,6 +8,10 @@ async function fetchData() {
         updateOpportunities(data.top_opportunities || []);
         updateLogs(data.logs || []);
         updateStrategyCounts(data.top_opportunities || []);
+        
+        if (data.network_graph) {
+            updateNetworkGraph(data.network_graph);
+        }
 
         if (data.live_prices) {
             updateIndices(data.live_prices);
@@ -144,3 +148,87 @@ function updateIndices(livePrices) {
 // ── Init ─────────────────────────────────────────────────────────────────────
 fetchData();
 setInterval(fetchData, 1500);
+
+// ── Network Graph ────────────────────────────────────────────────────────────
+let networkInstance = null;
+let networkNodes = null;
+let networkEdges = null;
+
+function updateNetworkGraph(graphData) {
+    if (typeof vis === 'undefined' || !graphData) return;
+
+    const container = document.getElementById('network-graph');
+    if (!container) return;
+
+    const nodesMap = new Map();
+    const edgesList = [];
+
+    for (const [source, targets] of Object.entries(graphData)) {
+        if (!nodesMap.has(source)) {
+            nodesMap.set(source, { id: source, label: source });
+        }
+        
+        for (const [target, rate] of Object.entries(targets)) {
+            if (!nodesMap.has(target)) {
+                nodesMap.set(target, { id: target, label: target });
+            }
+            
+            edgesList.push({
+                id: `${source}-${target}`,
+                from: source,
+                to: target,
+                arrows: 'to',
+                title: `Rate: ${parseFloat(rate).toFixed(6)}`, // Tooltip on hover
+                color: { color: 'rgba(148, 163, 184, 0.2)', highlight: '#10b981' }
+            });
+        }
+    }
+
+    const nodesArr = Array.from(nodesMap.values());
+
+    if (!networkInstance) {
+        networkNodes = new vis.DataSet(nodesArr);
+        networkEdges = new vis.DataSet(edgesList);
+
+        const data = { nodes: networkNodes, edges: networkEdges };
+        const options = {
+            nodes: {
+                shape: 'dot',
+                size: 20,
+                font: { color: '#f8fafc', size: 14, face: 'Inter' },
+                borderWidth: 2,
+                color: { 
+                    border: '#1e293b', 
+                    background: '#3b82f6',
+                    highlight: { border: '#f8fafc', background: '#0ea5e9' }
+                }
+            },
+            edges: {
+                smooth: { type: 'dynamic' },
+                selectionWidth: 2
+            },
+            physics: {
+                barnesHut: {
+                    gravitationalConstant: -3000,
+                    centralGravity: 0.3,
+                    springLength: 150,
+                    springConstant: 0.04,
+                    damping: 0.09
+                },
+                stabilization: { iterations: 150 }
+            },
+            interaction: {
+                hover: true,
+                tooltipDelay: 200
+            }
+        };
+
+        networkInstance = new vis.Network(container, data, options);
+    } else {
+        // Update nodes and edges dynamically without redrawing everything
+        networkNodes.update(nodesArr);
+        
+        // For edges, we just update the title (rate) so it stays real-time
+        networkEdges.update(edgesList.map(e => ({ id: e.id, title: e.title })));
+    }
+}

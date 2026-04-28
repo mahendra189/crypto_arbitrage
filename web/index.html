@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Arbitrage Engine Live</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 </head>
 <body>
     <div class="dashboard">
@@ -25,6 +26,11 @@
                     <div>Funding Rate: <span id="count-funding" style="color: var(--text-primary);">0</span></div>
                 </div>
             </div>
+        </div>
+
+        <div class="glass-panel" style="margin-bottom: 2rem; height: 400px; padding: 1rem; position: relative;">
+            <h3 style="text-align: center; margin-top: 0; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 1rem;">Real-Time Arbitrage Graph</h3>
+            <div id="network-graph" style="width: 100%; height: calc(100% - 30px);"></div>
         </div>
 
         <div class="grid-layout">

@@ -30,6 +30,9 @@ class GraphBuilder:
 
             if not base or not quote:
                 continue
+                
+            if base not in self.currencies or quote not in self.currencies:
+                continue
 
             # 🔥 IMPORTANT: allow full graph (no strict filtering)
             graph[base][quote] = bid_price
