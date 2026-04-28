@@ -30,12 +30,12 @@ class Config:
         self.per_hop_cost = self.fee + self.slippage
         self.withdrawal_fee_usdt = 0.5
 
-        # Opportunity quality filters
-        self.min_profit_threshold = 0.0001
-        self.cross_broker_min_profit = 0.001
-        self.min_display_profit_pct = 0.01
-        self.min_confidence = 0.35
-        self.min_estimated_pnl_usdt = 0.25
+        # Opportunity quality filters (Lowered for Testing/Demonstration)
+        self.min_profit_threshold = -0.05       # Allow up to 5% loss theoretically 
+        self.cross_broker_min_profit = -0.05    # Show cross broker even if it loses money
+        self.min_display_profit_pct = -0.05     # Show triangular even if negative
+        self.min_confidence = 0.1               # Show very low confidence
+        self.min_estimated_pnl_usdt = -50.0
 
         # Scan cadence
         self.scan_interval = 2
@@ -69,24 +69,24 @@ class Config:
             ("XRPUSDT", "ADAUSDT"),
             ("DOTUSDT", "AVAXUSDT"),
         ]
-        self.stat_arb_window = 30
-        self.stat_arb_z_threshold = 1.5
+        self.stat_arb_window = 10               # Shortened window for faster testing signals
+        self.stat_arb_z_threshold = 0.1         # Fire Stat Arb signal very quickly
 
         # Funding-rate arbitrage
         self.enable_funding_arb = True
-        self.funding_rate_threshold = 0.0001
-        self.min_funding_period_profit_pct = 0.005
-        self.max_funding_basis_pct = 1.0
+        self.funding_rate_threshold = 0.0       # Show ALL funding rates
+        self.min_funding_period_profit_pct = -0.5
+        self.max_funding_basis_pct = 5.0
 
         # Paper trading
         self.paper_trade_starting_balance_usdt = 10000.0
         self.default_trade_allocation_usdt = 1000.0
 
-        # Conservative execution buffers, expressed in percentage points.
-        self.execution_buffer_pct = 0.03
-        self.cross_execution_buffer_pct = 0.05
-        self.stat_execution_buffer_pct = 0.04
-        self.funding_execution_buffer_pct = 0.015
+        # Conservative execution buffers (Lowered to 0 to show Raw Theoretical Data)
+        self.execution_buffer_pct = 0.0
+        self.cross_execution_buffer_pct = 0.0
+        self.stat_execution_buffer_pct = 0.0
+        self.funding_execution_buffer_pct = 0.0
 
         self.max_opportunities_display = 20
 
