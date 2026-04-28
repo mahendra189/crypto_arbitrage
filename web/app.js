@@ -10,7 +10,7 @@ async function fetchData() {
         updateOpportunities(data.top_opportunities || []);
         updateLogs(data.logs || []);
         updateStrategyCounts(data.top_opportunities || []);
-        
+
         if (data.network_graph) {
             updateNetworkGraph(data.network_graph);
         }
@@ -21,7 +21,7 @@ async function fetchData() {
         if (data.live_prices) {
             updateIndices(data.live_prices);
         }
-        
+
         updateScannerStatus(data.scan_state || 'live');
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -53,7 +53,7 @@ async function toggleScanner() {
 function updateScannerStatus(state) {
     const statusDiv = document.getElementById('scanner-status');
     const pulseDiv = document.getElementById('scanner-pulse');
-    
+
     if (state === 'paused') {
         statusDiv.style.color = 'var(--text-secondary)';
         statusDiv.innerHTML = 'Scanner Paused <div class="pulse-dot" id="scanner-pulse" style="background-color: var(--text-secondary); box-shadow: none; animation: none;"></div>';
@@ -73,10 +73,10 @@ function updateStrategyCounts(opportunities) {
 
     const el = (id) => document.getElementById(id);
     if (el('count-triangular')) el('count-triangular').textContent = counts.triangular;
-    if (el('count-cross'))      el('count-cross').textContent      = counts.cross_broker + (counts.spatial_arbitrage || 0);
-    if (el('count-stat'))       el('count-stat').textContent        = counts.statistical;
-    if (el('count-funding'))    el('count-funding').textContent     = counts.funding_rate;
-    
+    if (el('count-cross')) el('count-cross').textContent = counts.cross_broker + (counts.spatial_arbitrage || 0);
+    if (el('count-stat')) el('count-stat').textContent = counts.statistical;
+    if (el('count-funding')) el('count-funding').textContent = counts.funding_rate;
+
     const totalCount = opportunities.length;
     if (el('count-all')) el('count-all').textContent = totalCount;
 }
@@ -84,21 +84,21 @@ function updateStrategyCounts(opportunities) {
 // ── Filter Controls ──────────────────────────────────────────────────────────
 function setFilter(filterType) {
     currentFilter = filterType;
-    
+
     // Update active class on buttons
     document.querySelectorAll('.filter-tab').forEach(btn => {
         btn.classList.remove('active');
     });
-    
+
     let btnId = 'filter-all';
     if (filterType === 'triangular') btnId = 'filter-triangular';
     else if (filterType === 'cross') btnId = 'filter-cross';
     else if (filterType === 'statistical') btnId = 'filter-statistical';
     else if (filterType === 'funding_rate') btnId = 'filter-funding';
-    
+
     const activeBtn = document.getElementById(btnId);
     if (activeBtn) activeBtn.classList.add('active');
-    
+
     // Re-render table immediately using cached data (which is handled by next fetch tick, or we can just fetch now)
     fetchData();
 }
@@ -107,7 +107,7 @@ function setFilter(filterType) {
 function updateOpportunities(allOpportunities) {
     const tbody = document.getElementById('opp-list');
     tbody.innerHTML = '';
-    
+
     let opportunities = allOpportunities;
     if (currentFilter !== 'all') {
         opportunities = allOpportunities.filter(opp => {
@@ -125,7 +125,7 @@ function updateOpportunities(allOpportunities) {
         let typeBadge = '';
         let grossProfit = 0;
         let netProfit = 0;
-        
+
         if (opp.type === 'triangular') {
             typeBadge = '<span class="badge badge-triangular">TRI</span>';
             grossProfit = opp.raw_profit !== undefined ? opp.raw_profit : 0;
@@ -177,11 +177,11 @@ function updateLogs(logs) {
     let html = '';
     logs.forEach(log => {
         let spanClass = '';
-        if (log.includes('[SIGNAL]'))  spanClass = 'log-signal';
-        else if (log.includes('[ERROR]'))   spanClass = 'log-error';
+        if (log.includes('[SIGNAL]')) spanClass = 'log-signal';
+        else if (log.includes('[ERROR]')) spanClass = 'log-error';
         else if (log.includes('[WARNING]')) spanClass = 'log-warning';
-        else if (log.includes('[INFO]'))    spanClass = 'log-info';
-        else if (log.includes('[DEBUG]'))   spanClass = 'log-debug';
+        else if (log.includes('[INFO]')) spanClass = 'log-info';
+        else if (log.includes('[DEBUG]')) spanClass = 'log-debug';
 
         html += `<div class="${spanClass}">${log.replace(/→/g, '&rarr;')}</div>`;
     });
@@ -245,12 +245,12 @@ function updateNetworkGraph(graphData) {
         if (!nodesMap.has(source)) {
             nodesMap.set(source, { id: source, label: source });
         }
-        
+
         for (const [target, rate] of Object.entries(targets)) {
             if (!nodesMap.has(target)) {
                 nodesMap.set(target, { id: target, label: target });
             }
-            
+
             edgesList.push({
                 id: `${source}-${target}`,
                 from: source,
@@ -275,8 +275,8 @@ function updateNetworkGraph(graphData) {
                 size: 20,
                 font: { color: '#f8fafc', size: 14, face: 'Inter' },
                 borderWidth: 2,
-                color: { 
-                    border: '#1e293b', 
+                color: {
+                    border: '#1e293b',
                     background: '#3b82f6',
                     highlight: { border: '#f8fafc', background: '#0ea5e9' }
                 }
@@ -305,7 +305,7 @@ function updateNetworkGraph(graphData) {
     } else {
         // Update nodes and edges dynamically without redrawing everything
         networkNodes.update(nodesArr);
-        
+
         // For edges, we just update the title (rate) so it stays real-time
         networkEdges.update(edgesList.map(e => ({ id: e.id, title: e.title })));
     }
@@ -317,7 +317,7 @@ function updatePredictions(predictions) {
     if (!container || !predictions) return;
 
     let html = '';
-    
+
     // Sort by volatility (most volatile first)
     const sorted = Object.entries(predictions).sort((a, b) => b[1].volatility - a[1].volatility);
 
@@ -330,7 +330,7 @@ function updatePredictions(predictions) {
         const trendColor = data.trend === 'BULLISH' ? 'var(--neon-green)' : (data.trend === 'BEARISH' ? 'var(--neon-red)' : 'var(--text-secondary)');
         const pctColor = data.change_pct > 0 ? 'var(--neon-green)' : (data.change_pct < 0 ? 'var(--neon-red)' : 'var(--text-secondary)');
         const pctPrefix = data.change_pct > 0 ? '+' : '';
-        
+
         let priceStr = data.predicted_next;
         if (priceStr < 1) priceStr = priceStr.toFixed(5);
         else if (priceStr < 100) priceStr = priceStr.toFixed(3);

@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Arbitrage Engine Live</title>
+    <title>Crypto Arbitrage</title>
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 </head>
+
 <body>
     <div class="dashboard">
         <header class="glass-header">
-            <div class="logo">Crypto <span class="neon-text">Arbitrage</span> Dashboard</div>
+            <div class="logo">Crypto <span class="neon-text">Arbitrage</span></div>
             <div id="market-indices" class="market-indices"></div>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <button id="toggle-scanner-btn" onclick="toggleScanner()" class="nav-btn" style="background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.5); color: var(--neon-blue); cursor: pointer;">Pause Scanner</button>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <label class="switch">
+                    <input type="checkbox" id="scanner-toggle-checkbox" onchange="toggleScanner()" checked>
+                    <span class="slider"></span>
+                </label>
                 <div class="status-indicator" id="scanner-status">
-                    Scanner Running <div class="pulse-dot" id="scanner-pulse"></div>
+                    Scanner <div class="pulse-dot" id="scanner-pulse"></div>
                 </div>
             </div>
         </header>
@@ -24,12 +29,18 @@
 
         <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
             <div class="glass-panel" style="flex: 2; height: 400px; padding: 1rem; position: relative;">
-                <h3 style="text-align: center; margin-top: 0; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 1rem;">Real-Time Arbitrage Graph</h3>
+                <h3
+                    style="text-align: center; margin-top: 0; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 1rem;">
+                    Real-Time Arbitrage Graph</h3>
                 <div id="network-graph" style="width: 100%; height: calc(100% - 30px);"></div>
             </div>
-            <div class="glass-panel" style="flex: 1; height: 400px; padding: 1rem; position: relative; overflow-y: auto;">
-                <h3 style="text-align: center; margin-top: 0; margin-bottom: 0.5rem; color: var(--neon-purple); font-size: 1rem; text-shadow: 0 0 5px rgba(139, 92, 246, 0.3);">Real-Time Market AI</h3>
-                <div id="predictions-container" style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;">
+            <div class="glass-panel"
+                style="flex: 1; height: 400px; padding: 1rem; position: relative; overflow-y: auto;">
+                <h3
+                    style="text-align: center; margin-top: 0; margin-bottom: 0.5rem; color: var(--neon-purple); font-size: 1rem; text-shadow: 0 0 5px rgba(139, 92, 246, 0.3);">
+                    Real-Time Market AI</h3>
+                <div id="predictions-container"
+                    style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;">
                     <!-- Injected via JS -->
                 </div>
             </div>
@@ -38,11 +49,16 @@
         <div class="grid-layout">
             <div class="glass-panel" style="display: flex; flex-direction: column;">
                 <div style="display: flex; border-bottom: 1px solid var(--glass-border); margin-bottom: 1rem;">
-                    <div class="filter-tab active" onclick="setFilter('all')" id="filter-all">All (<span id="count-all" style="color: var(--text-primary);">0</span>)</div>
-                    <div class="filter-tab" onclick="setFilter('triangular')" id="filter-triangular">Triangular (<span id="count-triangular" style="color: var(--text-primary);">0</span>)</div>
-                    <div class="filter-tab" onclick="setFilter('cross')" id="filter-cross">Cross-Broker (<span id="count-cross" style="color: var(--text-primary);">0</span>)</div>
-                    <div class="filter-tab" onclick="setFilter('statistical')" id="filter-statistical">Statistical (<span id="count-stat" style="color: var(--text-primary);">0</span>)</div>
-                    <div class="filter-tab" onclick="setFilter('funding_rate')" id="filter-funding">Funding (<span id="count-funding" style="color: var(--text-primary);">0</span>)</div>
+                    <div class="filter-tab active" onclick="setFilter('all')" id="filter-all">All (<span id="count-all"
+                            style="color: var(--text-primary);">0</span>)</div>
+                    <div class="filter-tab" onclick="setFilter('triangular')" id="filter-triangular">Triangular (<span
+                            id="count-triangular" style="color: var(--text-primary);">0</span>)</div>
+                    <div class="filter-tab" onclick="setFilter('cross')" id="filter-cross">Cross-Broker (<span
+                            id="count-cross" style="color: var(--text-primary);">0</span>)</div>
+                    <div class="filter-tab" onclick="setFilter('statistical')" id="filter-statistical">Statistical
+                        (<span id="count-stat" style="color: var(--text-primary);">0</span>)</div>
+                    <div class="filter-tab" onclick="setFilter('funding_rate')" id="filter-funding">Funding (<span
+                            id="count-funding" style="color: var(--text-primary);">0</span>)</div>
                 </div>
                 <div class="table-container">
                     <table>
@@ -69,7 +85,8 @@
             </div>
         </div>
     </div>
-    
+
     <script src="app.js"></script>
 </body>
+
 </html>
