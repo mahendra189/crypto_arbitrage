@@ -330,3 +330,40 @@ th {
     color: #34d399;
     filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.6));
 }
+
+.nav-btn {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+.nav-btn:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+.nav-btn.active {
+    color: var(--neon-blue);
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.filter-tab {
+    padding: 0.75rem 1.25rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+.filter-tab:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+.filter-tab.active {
+    color: var(--neon-blue);
+    border-bottom: 2px solid var(--neon-blue);
+    background: rgba(14, 165, 233, 0.05);
+}

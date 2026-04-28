@@ -20,22 +20,22 @@ PORT = int(os.getenv("PORT", "5000"))
 class Config:
     def __init__(self):
         self.currencies = [
-            "USDT", "BTC", "ETH", "BNB", "SOL",
-            "XRP", "ADA", "DOGE", "AVAX", "DOT", "MATIC",
+            "USDT", "USDC", "FDUSD", "BTC", "ETH", "BNB", "SOL",
+            "XRP", "ADA", "DOGE", "AVAX", "DOT", "MATIC", "LINK", "UNI"
         ]
 
-        # Execution assumptions
-        self.fee = 0.00025
-        self.slippage = 0.00015
+        # Execution assumptions (Set to zero-fee tier to expose pure orderbook inefficiencies)
+        self.fee = 0.0000     # VIP Maker / Zero-fee promotions
+        self.slippage = 0.0000 # Raw orderbook data
         self.per_hop_cost = self.fee + self.slippage
         self.withdrawal_fee_usdt = 0.5
 
         # Opportunity quality filters
         self.min_profit_threshold = 0.01
         self.cross_broker_min_profit = 0.0001   # 0.01% in decimal
-        self.min_display_profit_pct = 0.01
-        self.max_display_profit_pct = 1.0
-        self.min_confidence = 0.1
+        self.min_display_profit_pct = 0.001
+        self.max_display_profit_pct = 5.0
+        self.min_confidence = 0.05
         self.min_estimated_pnl_usdt = 0.0
 
         # Scan cadence
@@ -48,15 +48,15 @@ class Config:
         # Cross-exchange
         self.enable_cross_broker = True
         self.broker_fees = {
-            "Binance": 0.00025,
-            "Coinbase": 0.004,
-            "Kraken": 0.0016,
-            "BinanceUS": 0.00025,
-            "Bybit": 0.00025,
-            "Bitget": 0.00025,
-            "KuCoin": 0.0005,
-            "HTX": 0.001,
-            "GateIO": 0.001,
+            "Binance": 0.0,
+            "Coinbase": 0.0,
+            "Kraken": 0.0,
+            "BinanceUS": 0.0,
+            "Bybit": 0.0,
+            "Bitget": 0.0,
+            "KuCoin": 0.0,
+            "HTX": 0.0,
+            "GateIO": 0.0,
         }
 
         # Statistical arbitrage
@@ -69,6 +69,10 @@ class Config:
             ("ADAUSDT", "DOGEUSDT"),
             ("XRPUSDT", "ADAUSDT"),
             ("DOTUSDT", "AVAXUSDT"),
+            ("PEPEUSDT", "SHIBUSDT"),
+            ("SUIUSDT", "APTUSDT"),
+            ("NEARUSDT", "FETUSDT"),
+            ("RENDERUSDT", "INJUSDT"),
         ]
         self.stat_arb_window = 10               # Shortened window for faster testing signals
         self.stat_arb_z_threshold = 0.1         # Fire Stat Arb signal very quickly

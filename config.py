@@ -12,9 +12,9 @@ class Config:
         self.slippage = 0.001
         self.per_hop_cost = self.fee + self.slippage
 
-        self.min_profit_threshold = 0.3
-        self.cross_broker_min_profit = 0.8
-        self.funding_rate_min_profit = 0.5
+        self.min_profit_threshold = 0.01
+        self.cross_broker_min_profit = 0.01
+        self.funding_rate_min_profit = 0.01
 
         self.scan_interval = 1
 
@@ -55,6 +55,6 @@ class Config:
             "BTCUSDT", "ETHUSDT", "SOLUSDT"
         ]
 
-        self.funding_rate_threshold = 0.0005
+        self.funding_rate_threshold = 0.0001
 
-        self.max_opportunities_display = 15
+        self.max_opportunities_display = 30

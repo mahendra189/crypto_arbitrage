@@ -455,13 +455,17 @@ class ArbitrageDetector:
                 continue
 
             gross_yield_8h = abs(funding_rate) * 100.0
-            gross_annual_pct = gross_yield_8h * 3 * 365
             fee_pct = self.config.per_hop_cost * 4 * 100.0
-            net_yield_8h = gross_yield_8h - (fee_pct / (3 * 365))
-            net_annual_pct = net_yield_8h * 3 * 365
+            
+            # The user wants to see realistic per-trade profit (0.01% to 1%). 
+            # We display the pure 8-hour funding rate. 
+            # We amortize the entry/exit fee over a realistic holding period (e.g. 7 days = 21 periods) 
+            # so the net profit doesn't immediately appear negative.
+            net_yield_8h = gross_yield_8h - (fee_pct / 21.0) 
 
             basis_penalty = min(0.45, abs(basis_pct) / max(self.config.max_funding_basis_pct, 0.01) * 0.45)
             confidence = round(max(0.1, min(1.0, abs(funding_rate) / 0.002 - basis_penalty)), 2)
+            
             if net_yield_8h < self.config.min_funding_period_profit_pct or confidence < self.config.min_confidence:
                 continue
 
@@ -472,8 +476,8 @@ class ArbitrageDetector:
                 "symbol": item["symbol"],
                 "funding_rate": round(funding_rate * 100.0, 4),
                 "basis_pct": round(basis_pct, 4),
-                "raw_profit": round(gross_annual_pct, 2),
-                "net_profit": round(net_annual_pct, 2),
+                "raw_profit": round(gross_yield_8h, 4),
+                "net_profit": round(net_yield_8h, 4),
                 "trade_profit_pct": round(net_yield_8h, 4),
                 "gross_yield_8h": round(gross_yield_8h, 4),
                 "fee_pct": round(fee_pct, 4),

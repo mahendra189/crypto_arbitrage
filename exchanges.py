@@ -8,18 +8,15 @@ import time
 import requests
 
 TOP10_USDT = [
-    "BTCUSDT",
-    "ETHUSDT",
-    "BNBUSDT",
-    "SOLUSDT",
-    "XRPUSDT",
-    "ADAUSDT",
-    "DOGEUSDT",
-    "AVAXUSDT",
-    "DOTUSDT",
-    "MATICUSDT",
+    "BTCUSDT", "ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT",
+    "ADAUSDT", "DOGEUSDT", "AVAXUSDT", "DOTUSDT", "MATICUSDT",
+    "PEPEUSDT", "SHIBUSDT", "NEARUSDT", "INJUSDT", "SUIUSDT",
+    "SEIUSDT", "APTUSDT", "FETUSDT", "RENDERUSDT", "ARBUSDT"
 ]
-TOP10_BASES = ["BTC", "ETH", "BNB", "SOL", "XRP", "ADA", "DOGE", "AVAX", "DOT", "MATIC"]
+TOP10_BASES = [
+    "BTC", "ETH", "BNB", "SOL", "XRP", "ADA", "DOGE", "AVAX", "DOT", "MATIC",
+    "PEPE", "SHIB", "NEAR", "INJ", "SUI", "SEI", "APT", "FET", "RENDER", "ARB"
+]
 
 HTTP = requests.Session()
 HTTP.trust_env = False

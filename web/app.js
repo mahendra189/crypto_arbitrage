@@ -1,4 +1,6 @@
 // ── Data fetching ────────────────────────────────────────────────────────────
+let currentFilter = 'all';
+
 async function fetchData() {
     try {
         const response = await fetch('data.json?t=' + Date.now());
@@ -71,16 +73,49 @@ function updateStrategyCounts(opportunities) {
 
     const el = (id) => document.getElementById(id);
     if (el('count-triangular')) el('count-triangular').textContent = counts.triangular;
-    if (el('count-cross'))      el('count-cross').textContent      = counts.cross_broker;
+    if (el('count-cross'))      el('count-cross').textContent      = counts.cross_broker + (counts.spatial_arbitrage || 0);
     if (el('count-stat'))       el('count-stat').textContent        = counts.statistical;
     if (el('count-funding'))    el('count-funding').textContent     = counts.funding_rate;
+    
+    const totalCount = opportunities.length;
+    if (el('count-all')) el('count-all').textContent = totalCount;
+}
+
+// ── Filter Controls ──────────────────────────────────────────────────────────
+function setFilter(filterType) {
+    currentFilter = filterType;
+    
+    // Update active class on buttons
+    document.querySelectorAll('.filter-tab').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    let btnId = 'filter-all';
+    if (filterType === 'triangular') btnId = 'filter-triangular';
+    else if (filterType === 'cross') btnId = 'filter-cross';
+    else if (filterType === 'statistical') btnId = 'filter-statistical';
+    else if (filterType === 'funding_rate') btnId = 'filter-funding';
+    
+    const activeBtn = document.getElementById(btnId);
+    if (activeBtn) activeBtn.classList.add('active');
+    
+    // Re-render table immediately using cached data (which is handled by next fetch tick, or we can just fetch now)
+    fetchData();
 }
 
 // ── Opportunity table ────────────────────────────────────────────────────────
-function updateOpportunities(opportunities) {
+function updateOpportunities(allOpportunities) {
     const tbody = document.getElementById('opp-list');
     tbody.innerHTML = '';
     
+    let opportunities = allOpportunities;
+    if (currentFilter !== 'all') {
+        opportunities = allOpportunities.filter(opp => {
+            if (currentFilter === 'cross') return opp.type === 'cross_broker' || opp.type === 'spatial_arbitrage';
+            return opp.type === currentFilter;
+        });
+    }
+
     if (opportunities.length === 0) {
         tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; color: var(--text-secondary)">Waiting for market data...</td></tr>';
         return;
@@ -95,10 +130,10 @@ function updateOpportunities(opportunities) {
             typeBadge = '<span class="badge badge-triangular">TRI</span>';
             grossProfit = opp.raw_profit !== undefined ? opp.raw_profit : 0;
             netProfit = opp.net_profit !== undefined ? opp.net_profit : 0;
-        } else if (opp.type === 'cross_broker') {
-            typeBadge = '<span class="badge badge-cross">CROSS</span>';
-            grossProfit = opp.gross_profit_pct !== undefined ? opp.gross_profit_pct : 0;
-            netProfit = opp.profit_pct !== undefined ? opp.profit_pct : 0;
+        } else if (opp.type === 'cross_broker' || opp.type === 'spatial_arbitrage') {
+            typeBadge = `<span class="badge badge-cross">${opp.type === 'spatial_arbitrage' ? 'SPATIAL' : 'CROSS'}</span>`;
+            grossProfit = opp.gross_profit_pct !== undefined ? opp.gross_profit_pct : (opp.raw_profit || 0);
+            netProfit = opp.profit_pct !== undefined ? opp.profit_pct : (opp.net_profit || 0);
         } else if (opp.type === 'funding_rate') {
             typeBadge = '<span class="badge badge-funding">FUND</span>';
             grossProfit = opp.raw_profit !== undefined ? opp.raw_profit : 0;

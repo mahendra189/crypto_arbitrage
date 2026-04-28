@@ -7,679 +7,1361 @@
  * Running on http://127.0.0.1:5000
  * Running on http://10.20.19.254:5000
 [33mPress CTRL+C to quit[0m
-127.0.0.1 - - [28/Apr/2026 14:35:24] "GET /data.json?t=1777367124801 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:35:44] "GET /data.json?t=1777367144543 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:35:44] "GET / HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:35:44] "[36mGET /styles.css HTTP/1.1[0m" 304 -
-127.0.0.1 - - [28/Apr/2026 14:35:44] "GET /app.js HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:35:45] "GET /data.json?t=1777367145345 HTTP/1.1" 200 -
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] Bitget: 9 tickers
+127.0.0.1 - - [28/Apr/2026 15:04:52] "GET /data.json?t=1777368892364 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:04:53] "GET /data.json?t=1777368893863 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:04:55] "GET /data.json?t=1777368895364 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:04:56] "GET /data.json?t=1777368896863 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:04:58] "GET /data.json?t=1777368898364 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:04:59] "GET /data.json?t=1777368899864 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:01] "GET /data.json?t=1777368901364 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:02] "GET /data.json?t=1777368902863 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:04] "GET /data.json?t=1777368904365 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:05] "GET /data.json?t=1777368905864 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:07] "GET /data.json?t=1777368907363 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:08] "GET /data.json?t=1777368908864 HTTP/1.1" 200 -
 [DEBUG] Binance: 3577 tickers
+[DEBUG] Bybit: 19 tickers
 [DEBUG] Kraken: 1730 tickers
+[DEBUG] KuCoin: 19 tickers
+[DEBUG] Bitget: 19 tickers
 [DEBUG] BinanceUS: 619 tickers
+[DEBUG] HTX: 19 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
 [INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on GateIO
+     Net: +0.0763%  |  Est PnL: $+0.76  |  Conf: 53%
+
+  2. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on KuCoin & Sell on GateIO
+     Net: +0.0763%  |  Est PnL: $+0.76  |  Conf: 53%
+
+  3. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bitget & Sell on GateIO
+     Net: +0.0654%  |  Est PnL: $+0.65  |  Conf: 53%
+
+  4. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Kraken & Sell on GateIO
+     Net: +0.0654%  |  Est PnL: $+0.65  |  Conf: 51%
+
+  5. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Coinbase & Sell on GateIO
+     Net: +0.0654%  |  Est PnL: $+0.65  |  Conf: 51%
+
+  6. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS
+     Net: +0.0614%  |  Est PnL: $+0.61  |  Conf: 53%
+
+  7. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on HTX & Sell on GateIO
+     Net: +0.0611%  |  Est PnL: $+0.61  |  Conf: 53%
+
+  8. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0604%  |  Est PnL: $+0.60  |  Conf: 53%
+
+  9. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 52%
+
+  10. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on GateIO & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 52%
+
+  11. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on KuCoin
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  12. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on Bitget
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  13. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on GateIO
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  14. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Binance & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  15. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Bybit & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  16. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Kraken & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  17. [CROSS_BROKER] Simultaneous: Buy INJUSDT on KuCoin & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  18. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Bitget & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  19. [CROSS_BROKER] Simultaneous: Buy INJUSDT on GateIO & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  20. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0650%  |  Est PnL: $+0.65  |  Conf: 32%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 19 | funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy AVAXUSDT on Bybit & Sell on GateIO | +0.0763% | $+0.76
+[SIGNAL] Realistic signal: Simultaneous: Buy AVAXUSDT on KuCoin & Sell on GateIO | +0.0763% | $+0.76
+[SIGNAL] Realistic signal: Simultaneous: Buy AVAXUSDT on Bitget & Sell on GateIO | +0.0654% | $+0.65
+[SIGNAL] Realistic signal: Simultaneous: Buy AVAXUSDT on Kraken & Sell on GateIO | +0.0654% | $+0.65
+[SIGNAL] Realistic signal: Simultaneous: Buy AVAXUSDT on Coinbase & Sell on GateIO | +0.0654% | $+0.65
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] KuCoin: 9 tickers
+[DEBUG] HTX: 19 tickers
+[DEBUG] Bybit: 19 tickers
+[DEBUG] Bitget: 19 tickers
 [DEBUG] Binance: 3577 tickers
+[DEBUG] KuCoin: 19 tickers
 [DEBUG] Kraken: 1730 tickers
 [DEBUG] BinanceUS: 619 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
 [INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on GateIO
+     Net: +0.0763%  |  Est PnL: $+0.76  |  Conf: 53%
+
+  2. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on KuCoin & Sell on GateIO
+     Net: +0.0654%  |  Est PnL: $+0.65  |  Conf: 53%
+
+  3. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Coinbase & Sell on GateIO
+     Net: +0.0654%  |  Est PnL: $+0.65  |  Conf: 51%
+
+  4. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS
+     Net: +0.0614%  |  Est PnL: $+0.61  |  Conf: 53%
+
+  5. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on HTX & Sell on GateIO
+     Net: +0.0611%  |  Est PnL: $+0.61  |  Conf: 53%
+
+  6. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0604%  |  Est PnL: $+0.60  |  Conf: 53%
+
+  7. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bitget & Sell on GateIO
+     Net: +0.0545%  |  Est PnL: $+0.55  |  Conf: 53%
+
+  8. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 52%
+
+  9. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on GateIO & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 52%
+
+  10. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on Bitget
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  11. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on KuCoin
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  12. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on GateIO
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  13. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Bybit & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  14. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Bitget & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  15. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Binance & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  16. [CROSS_BROKER] Simultaneous: Buy INJUSDT on KuCoin & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  17. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Kraken & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  18. [CROSS_BROKER] Simultaneous: Buy INJUSDT on GateIO & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  19. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0650%  |  Est PnL: $+0.65  |  Conf: 32%
+
+  20. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bitget & Sell on KuCoin
+     Net: +0.0311%  |  Est PnL: $+0.31  |  Conf: 52%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 19 | funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy AVAXUSDT on Bybit & Sell on GateIO | +0.0763% | $+0.76
+[SIGNAL] Realistic signal: Simultaneous: Buy AVAXUSDT on KuCoin & Sell on GateIO | +0.0654% | $+0.65
+[SIGNAL] Realistic signal: Simultaneous: Buy AVAXUSDT on Coinbase & Sell on GateIO | +0.0654% | $+0.65
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS | +0.0614% | $+0.61
+[SIGNAL] Realistic signal: Simultaneous: Buy AVAXUSDT on HTX & Sell on GateIO | +0.0611% | $+0.61
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
+[DEBUG] HTX: 19 tickers
+[DEBUG] Bybit: 19 tickers
 [DEBUG] Binance: 3577 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] KuCoin: 9 tickers
+[DEBUG] Bitget: 19 tickers
+[DEBUG] KuCoin: 19 tickers
 [DEBUG] BinanceUS: 619 tickers
 [DEBUG] Kraken: 1730 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20127.0.0.1 - - [28/Apr/2026 15:05:10] "GET /data.json?t=1777368910363 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:11] "GET /data.json?t=1777368911864 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:13] "GET /data.json?t=1777368913363 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:14] "GET /data.json?t=1777368914864 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:16] "GET /data.json?t=1777368916364 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:17] "GET /data.json?t=1777368917863 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:19] "GET /data.json?t=1777368919364 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:20] "GET /data.json?t=1777368920864 HTTP/1.1" 200 -
+
 [INFO]   Spatial Arbitrage (Transfer): 0
 [INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on GateIO
+     Net: +0.0763%  |  Est PnL: $+0.76  |  Conf: 53%
+
+  2. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Bybit & Sell on HTX
+     Net: +0.0724%  |  Est PnL: $+0.72  |  Conf: 49%
+
+  3. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Binance & Sell on HTX
+     Net: +0.0724%  |  Est PnL: $+0.72  |  Conf: 49%
+
+  4. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Bitget & Sell on HTX
+     Net: +0.0724%  |  Est PnL: $+0.72  |  Conf: 49%
+
+  5. [CROSS_BROKER] Simultaneous: Buy INJUSDT on KuCoin & Sell on HTX
+     Net: +0.0724%  |  Est PnL: $+0.72  |  Conf: 48%
+
+  6. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Kraken & Sell on HTX
+     Net: +0.0724%  |  Est PnL: $+0.72  |  Conf: 48%
+
+  7. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on KuCoin & Sell on GateIO
+     Net: +0.0654%  |  Est PnL: $+0.65  |  Conf: 53%
+
+  8. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Coinbase & Sell on GateIO
+     Net: +0.0654%  |  Est PnL: $+0.65  |  Conf: 51%
+
+  9. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0604%  |  Est PnL: $+0.60  |  Conf: 53%
+
+  10. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS
+     Net: +0.0573%  |  Est PnL: $+0.57  |  Conf: 52%
+
+  11. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on HTX & Sell on GateIO
+     Net: +0.0545%  |  Est PnL: $+0.55  |  Conf: 53%
+
+  12. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bitget & Sell on GateIO
+     Net: +0.0545%  |  Est PnL: $+0.55  |  Conf: 53%
+
+  13. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 52%
+
+  14. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on GateIO & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 52%
+
+  15. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on Bitget
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  16. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on KuCoin
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  17. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on GateIO
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  18. [CROSS_BROKER] Simultaneous: Buy INJUSDT on GateIO & Sell on HTX
+     Net: +0.0445%  |  Est PnL: $+0.44  |  Conf: 48%
+
+  19. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0649%  |  Est PnL: $+0.65  |  Conf: 32%
+
+  20. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bitget & Sell on KuCoin
+     Net: +0.0311%  |  Est PnL: $+0.31  |  Conf: 52%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 19 | funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy AVAXUSDT on Bybit & Sell on GateIO | +0.0763% | $+0.76
+[SIGNAL] Realistic signal: Simultaneous: Buy INJUSDT on Bybit & Sell on HTX | +0.0724% | $+0.72
+[SIGNAL] Realistic signal: Simultaneous: Buy INJUSDT on Binance & Sell on HTX | +0.0724% | $+0.72
+[SIGNAL] Realistic signal: Simultaneous: Buy INJUSDT on Bitget & Sell on HTX | +0.0724% | $+0.72
+[SIGNAL] Realistic signal: Simultaneous: Buy INJUSDT on KuCoin & Sell on HTX | +0.0724% | $+0.72
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] Kraken: 1730 tickers
-[DEBUG] Bybit: 9 tickers
+[DEBUG] HTX: 19 tickers
+[DEBUG] Bybit: 19 tickers
 [DEBUG] Binance: 3577 tickers
+[DEBUG] Bitget: 19 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] Kraken: 1730 tickers
+[DEBUG] KuCoin: 19 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
 [INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0604%  |  Est PnL: $+0.60  |  Conf: 53%
+
+  2. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS
+     Net: +0.0563%  |  Est PnL: $+0.56  |  Conf: 53%
+
+  3. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on Bitget
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  4. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on KuCoin
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  5. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on GateIO
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  6. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0402%  |  Est PnL: $+0.40  |  Conf: 52%
+
+  7. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on GateIO & Sell on BinanceUS
+     Net: +0.0402%  |  Est PnL: $+0.40  |  Conf: 52%
+
+  8. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0649%  |  Est PnL: $+0.65  |  Conf: 32%
+
+  9. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on GateIO
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  10. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bitget & Sell on KuCoin
+     Net: +0.0311%  |  Est PnL: $+0.31  |  Conf: 52%
+
+  11. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Binance & Sell on BinanceUS
+     Net: +0.0302%  |  Est PnL: $+0.30  |  Conf: 52%
+
+  12. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bitget & Sell on BinanceUS
+     Net: +0.0302%  |  Est PnL: $+0.30  |  Conf: 52%
+
+  13. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on HTX & Sell on KuCoin
+     Net: +0.0279%  |  Est PnL: $+0.28  |  Conf: 52%
+
+  14. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on Bitget
+     Net: +0.0254%  |  Est PnL: $+0.25  |  Conf: 52%
+
+  15. [CROSS_BROKER] Simultaneous: Buy BTCUSDT on KuCoin & Sell on Kraken
+     Net: +0.0250%  |  Est PnL: $+0.25  |  Conf: 52%
+
+  16. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on Bitget
+     Net: +0.0250%  |  Est PnL: $+0.25  |  Conf: 52%
+
+  17. [CROSS_BROKER] Simultaneous: Buy SOLUSDT on Coinbase & Sell on KuCoin
+     Net: +0.0239%  |  Est PnL: $+0.24  |  Conf: 52%
+
+  18. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on Bybit & Sell on HTX
+     Net: +0.0241%  |  Est PnL: $+0.24  |  Conf: 51%
+
+  19. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on Bitget
+     Net: +0.0236%  |  Est PnL: $+0.24  |  Conf: 52%
+
+  20. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on HTX
+     Net: +0.0218%  |  Est PnL: $+0.22  |  Conf: 52%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 19 | funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS | +0.0604% | $+0.60
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS | +0.0563% | $+0.56
+[SIGNAL] Realistic signal: Simultaneous: Buy FETUSDT on Binance & Sell on Bitget | +0.0497% | $+0.50
+[SIGNAL] Realistic signal: Simultaneous: Buy FETUSDT on Binance & Sell on KuCoin | +0.0497% | $+0.50
+[SIGNAL] Realistic signal: Simultaneous: Buy FETUSDT on Binance & Sell on GateIO | +0.0497% | $+0.50
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
+[DEBUG] HTX: 19 tickers
+[DEBUG] Bybit: 19 tickers
 [DEBUG] Binance: 3577 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] Coinbase: 6 tickers
+[DEBUG] Bitget: 19 tickers
+[DEBUG] KuCoin: 19 tickers
+[DEBUG] BinanceUS: 619 tickers
 [DEBUG] Kraken: 1730 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] Coinbase: 6 tickers
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
 [INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS127.0.0.1 - - [28/Apr/2026 15:05:22] "GET /data.json?t=1777368922363 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:23] "GET /data.json?t=1777368923864 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:24] "[36mGET / HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 15:05:24] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 15:05:24] "[36mGET /app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 15:05:25] "GET /data.json?t=1777368925047 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:26] "GET /data.json?t=1777368926549 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:28] "GET /data.json?t=1777368928048 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:29] "GET /data.json?t=1777368929548 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:31] "GET /data.json?t=1777368931049 HTTP/1.1" 200 -
+
+     Net: +0.0604%  |  Est PnL: $+0.60  |  Conf: 53%
+
+  2. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS
+     Net: +0.0584%  |  Est PnL: $+0.58  |  Conf: 53%
+
+  3. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Bitget & Sell on GateIO
+     Net: +0.0557%  |  Est PnL: $+0.56  |  Conf: 52%
+
+  4. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  5. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on Bitget
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  6. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on KuCoin
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  7. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on GateIO
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  8. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on HTX
+     Net: +0.0473%  |  Est PnL: $+0.47  |  Conf: 53%
+
+  9. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on KuCoin & Sell on GateIO
+     Net: +0.0436%  |  Est PnL: $+0.44  |  Conf: 52%
+
+  10. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on GateIO
+     Net: +0.0425%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  11. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on KuCoin & Sell on HTX
+     Net: +0.0425%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  12. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on HTX
+     Net: +0.0420%  |  Est PnL: $+0.42  |  Conf: 53%
+
+  13. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on GateIO & Sell on BinanceUS
+     Net: +0.0402%  |  Est PnL: $+0.40  |  Conf: 52%
+
+  14. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on HTX
+     Net: +0.0394%  |  Est PnL: $+0.39  |  Conf: 53%
+
+  15. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0649%  |  Est PnL: $+0.65  |  Conf: 32%
+
+  16. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on GateIO
+     Net: +0.0372%  |  Est PnL: $+0.37  |  Conf: 53%
+
+  17. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Bitget & Sell on HTX
+     Net: +0.0418%  |  Est PnL: $+0.42  |  Conf: 47%
+
+  18. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on GateIO
+     Net: +0.0346%  |  Est PnL: $+0.35  |  Conf: 53%
+
+  19. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on GateIO
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  20. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on HTX
+     Net: +0.0316%  |  Est PnL: $+0.32  |  Conf: 52%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 19 | funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS | +0.0604% | $+0.60
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS | +0.0584% | $+0.58
+[SIGNAL] Realistic signal: Simultaneous: Buy INJUSDT on Bitget & Sell on GateIO | +0.0557% | $+0.56
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS | +0.0503% | $+0.50
+[SIGNAL] Realistic signal: Simultaneous: Buy FETUSDT on Binance & Sell on Bitget | +0.0497% | $+0.50
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Bitget: 9 tickers
+[DEBUG] Bybit: 19 tickers
+[DEBUG] HTX: 19 tickers
 [DEBUG] BinanceUS: 619 tickers
-[DEBUG] KuCoin: 9 tickers
 [DEBUG] Binance: 3577 tickers
+[DEBUG] Bitget: 19 tickers
+[DEBUG] KuCoin: 19 tickers
 [DEBUG] Kraken: 1730 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
 [INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0704%  |  Est PnL: $+0.70  |  Conf: 53%
+
+  2. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS
+     Net: +0.0644%  |  Est PnL: $+0.64  |  Conf: 53%
+
+  3. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0604%  |  Est PnL: $+0.60  |  Conf: 53%
+
+  4. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on GateIO & Sell on BinanceUS
+     Net: +0.0604%  |  Est PnL: $+0.60  |  Conf: 53%
+
+  5. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Binance & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  6. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bitget & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  7. [CROSS_BROKER] Simultaneous: Buy SEIUSDT on Binance & Sell on GateIO
+     Net: +0.0501%  |  Est PnL: $+0.50  |  Conf: 52%
+
+  8. [CROSS_BROKER] Simultaneous: Buy SEIUSDT on Kraken & Sell on GateIO
+     Net: +0.0501%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  9. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on Bitget
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  10. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on GateIO
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  11. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on Bybit & Sell on HTX
+     Net: +0.0481%  |  Est PnL: $+0.48  |  Conf: 51%
+
+  12. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0649%  |  Est PnL: $+0.65  |  Conf: 32%
+
+  13. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 51%
+
+  14. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bitget & Sell on BinanceUS
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 51%
+
+  15. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 51%
+
+  16. [CROSS_BROKER] Simultaneous: Buy SHIBUSDT on HTX & Sell on GateIO
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 50%
+
+  17. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on HTX
+     Net: +0.0307%  |  Est PnL: $+0.31  |  Conf: 53%
+
+  18. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0307%  |  Est PnL: $+0.31  |  Conf: 53%
+
+  19. [CROSS_BROKER] Simultaneous: Buy NEARUSDT on KuCoin & Sell on GateIO
+     Net: +0.0297%  |  Est PnL: $+0.30  |  Conf: 52%
+
+  20. [CROSS_BROKER] Simultaneous: Buy BTCUSDT on KuCoin & Sell on Kraken
+     Net: +0.0291%  |  Est PnL: $+0.29  |  Conf: 53%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 19 | funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS | +0.0704% | $+0.70
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS | +0.0644% | $+0.64
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS | +0.0604% | $+0.60
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on GateIO & Sell on BinanceUS | +0.0604% | $+0.60
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on Binance & Sell on BinanceUS | +0.0503% | $+0.50
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
+[DEBUG] HTX: 19 tickers
+[DEBUG] Bybit: 19 tickers
 [DEBUG] Binance: 3577 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] KuCoin: 9 tickers
+[DEBUG] Bitget: 19 tickers
+[DEBUG] KuCoin: 19 tickers
 [DEBUG] BinanceUS: 619 tickers
 [DEBUG] Kraken: 1730 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
 [INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy SEIUSDT on Binance & Sell on GateIO
+     Net: +0.1003%  |  Est PnL: $+1.00  |  Conf: 52%
+
+  2. [CROSS_BROKER] Simultaneous: Buy SEIUSDT on Kraken & Sell on GateIO
+     Net: +0.1003%  |  Est PnL: $+1.00  |  Conf: 52%
+
+  3. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Binance & Sell on GateIO
+     Net: +0.0994%  |  Est PnL: $+0.99  |  Conf: 52%127.0.0.1 - - [28/Apr/2026 15:05:32] "GET /data.json?t=1777368932154 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:32] "GET /data.json?t=1777368932548 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:34] "GET /data.json?t=1777368934048 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:35] "GET /data.json?t=1777368935548 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:37] "GET /data.json?t=1777368937048 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:37] "GET /data.json?t=1777368937374 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:38] "GET /data.json?t=1777368938548 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:38] "[36mGET / HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 15:05:38] "[36mGET /app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 15:05:38] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 15:05:38] "GET /data.json?t=1777368938985 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:39] "[36mGET / HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 15:05:39] "[36mGET /app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 15:05:39] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Apr/2026 15:05:39] "GET /data.json?t=1777368939830 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:41] "GET /data.json?t=1777368941331 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:42] "GET /data.json?t=1777368942704 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:42] "GET /data.json?t=1777368942831 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:44] "GET /data.json?t=1777368944331 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:44] "GET /data.json?t=1777368944437 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:45] "GET /data.json?t=1777368945186 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:45] "GET /data.json?t=1777368945770 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:45] "GET /data.json?t=1777368945838 HTTP/1.1" 200 -
+
+
+  4. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Kraken & Sell on GateIO
+     Net: +0.0994%  |  Est PnL: $+0.99  |  Conf: 52%
+
+  5. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0906%  |  Est PnL: $+0.91  |  Conf: 53%
+
+  6. [CROSS_BROKER] Simultaneous: Buy SEIUSDT on Bybit & Sell on GateIO
+     Net: +0.0836%  |  Est PnL: $+0.84  |  Conf: 52%
+
+  7. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on Binance & Sell on HTX
+     Net: +0.0803%  |  Est PnL: $+0.80  |  Conf: 51%
+
+  8. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on Kraken & Sell on HTX
+     Net: +0.0803%  |  Est PnL: $+0.80  |  Conf: 51%
+
+  9. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS
+     Net: +0.0644%  |  Est PnL: $+0.64  |  Conf: 53%
+
+  10. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on Bybit & Sell on HTX
+     Net: +0.0642%  |  Est PnL: $+0.64  |  Conf: 52%
+
+  11. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0604%  |  Est PnL: $+0.60  |  Conf: 53%
+
+  12. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on GateIO & Sell on BinanceUS
+     Net: +0.0604%  |  Est PnL: $+0.60  |  Conf: 53%
+
+  13. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Binance & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  14. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bitget & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  15. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Bitget & Sell on GateIO
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  16. [CROSS_BROKER] Simultaneous: Buy FETUSDT on KuCoin & Sell on GateIO
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 51%
+
+  17. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on HTX
+     Net: +0.0477%  |  Est PnL: $+0.48  |  Conf: 53%
+
+  18. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS
+     Net: +0.0477%  |  Est PnL: $+0.48  |  Conf: 53%
+
+  19. [CROSS_BROKER] Simultaneous: Buy FETUSDT on Bybit & Sell on GateIO
+     Net: +0.0497%  |  Est PnL: $+0.50  |  Conf: 50%
+
+  20. [CROSS_BROKER] Simultaneous: Buy INJUSDT on GateIO & Sell on HTX
+     Net: +0.0474%  |  Est PnL: $+0.47  |  Conf: 47%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 20
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy SEIUSDT on Binance & Sell on GateIO | +0.1003% | $+1.00
+[SIGNAL] Realistic signal: Simultaneous: Buy SEIUSDT on Kraken & Sell on GateIO | +0.1003% | $+1.00
+[SIGNAL] Realistic signal: Simultaneous: Buy FETUSDT on Binance & Sell on GateIO | +0.0994% | $+0.99
+[SIGNAL] Realistic signal: Simultaneous: Buy FETUSDT on Kraken & Sell on GateIO | +0.0994% | $+0.99
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS | +0.0906% | $+0.91
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
+[DEBUG] HTX: 19 tickers
+[DEBUG] Bybit: 19 tickers
 [DEBUG] Binance: 3577 tickers
-[DEBUG] Bybit: 9 tickers
+[DEBUG] Bitget: 19 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] KuCoin: 19 tickers
 [DEBUG] Kraken: 1730 tickers
-[DEBUG] KuCoin: 9 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
 [INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot127.0.0.1 - - [28/Apr/2026 14:35:46] "GET /data.json?t=1777367146846 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:35:48] "GET /data.json?t=1777367148347 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:35:49] "GET /data.json?t=1777367149846 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:35:51] "GET /data.json?t=1777367151346 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:35:52] "GET /data.json?t=1777367152847 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:35:54] "GET /data.json?t=1777367154346 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:35:55] "GET /data.json?t=1777367155846 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:35:57] "GET /data.json?t=1777367157345 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:35:58] "GET /data.json?t=1777367158846 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:00] "GET /data.json?t=1777367160345 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:01] "GET /data.json?t=1777367161845 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:03] "GET /data.json?t=1777367163347 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:04] "GET /data.json?t=1777367164846 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:06] "GET /data.json?t=1777367166347 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:07] "GET /data.json?t=1777367167846 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:09] "GET /data.json?t=1777367169345 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:10] "GET /data.json?t=1777367170845 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:12] "GET /data.json?t=1777367172346 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:13] "GET /data.json?t=1777367173845 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:15] "GET /data.json?t=1777367175345 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:16] "GET /data.json?t=1777367176845 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:18] "GET /data.json?t=1777367178353 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:19] "GET /data.json?t=1777367179846 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:21] "GET /data.json?t=1777367181345 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:22] "GET /data.json?t=1777367182846 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:24] "GET /data.json?t=1777367184345 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:25] "GET /data.json?t=1777367185845 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:27] "GET /data.json?t=1777367187345 HTTP/1.1" 200 -
+  1. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0906%  |  Est PnL: $+0.91  |  Conf: 53%
 
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  2. [CROSS_BROKER] Simultaneous: Buy PEPEUSDT on Kraken & Sell on Bybit
+     Net: +0.0780%  |  Est PnL: $+0.78  |  Conf: 53%
+
+  3. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS
+     Net: +0.0765%  |  Est PnL: $+0.76  |  Conf: 53%
+
+  4. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0704%  |  Est PnL: $+0.70  |  Conf: 53%
+
+  5. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on GateIO & Sell on BinanceUS
+     Net: +0.0704%  |  Est PnL: $+0.70  |  Conf: 53%
+
+  6. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bitget & Sell on BinanceUS
+     Net: +0.0604%  |  Est PnL: $+0.60  |  Conf: 53%
+
+  7. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Binance & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  8. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS
+     Net: +0.0477%  |  Est PnL: $+0.48  |  Conf: 53%
+
+  9. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0438%  |  Est PnL: $+0.44  |  Conf: 53%
+
+  10. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0429%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  11. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0436%  |  Est PnL: $+0.44  |  Conf: 51%
+
+  12. [CROSS_BROKER] Simultaneous: Buy BTCUSDT on Coinbase & Sell on Kraken
+     Net: +0.0390%  |  Est PnL: $+0.39  |  Conf: 53%
+
+  13. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0649%  |  Est PnL: $+0.65  |  Conf: 31%
+
+  14. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on Kraken
+     Net: +0.0368%  |  Est PnL: $+0.37  |  Conf: 53%
+
+  15. [CROSS_BROKER] Simultaneous: Buy BTCUSDT on KuCoin & Sell on Kraken
+     Net: +0.0347%  |  Est PnL: $+0.35  |  Conf: 53%
+
+  16. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on GateIO & Sell on BinanceUS
+     Net: +0.0346%  |  Est PnL: $+0.35  |  Conf: 53%
+
+  17. [CROSS_BROKER] Simultaneous: Buy PEPEUSDT on HTX & Sell on Bybit
+     Net: +0.0337%  |  Est PnL: $+0.34  |  Conf: 52%
+
+  18. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on Kraken
+     Net: +0.0329%  |  Est PnL: $+0.33  |  Conf: 53%
+
+  19. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on GateIO
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  20. [CROSS_BROKER] Simultaneous: Buy SEIUSDT on Bitget & Sell on Binance
+     Net: +0.0334%  |  Est PnL: $+0.33  |  Conf: 50%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 19 | funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS | +0.0906% | $+0.91
+[SIGNAL] Realistic signal: Simultaneous: Buy PEPEUSDT on Kraken & Sell on Bybit | +0.0780% | $+0.78
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS | +0.0765% | $+0.76
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS | +0.0704% | $+0.70
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on GateIO & Sell on BinanceUS | +0.0704% | $+0.70
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] Kraken: 1730 tickers
+[DEBUG] HTX: 19 tickers
+[DEBUG] Bybit: 19 tickers
 [DEBUG] Binance: 3577 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] Bitget: 19 tickers
+[DEBUG] KuCoin: 19 tickers
+[DEBUG] Kraken: 1730 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
 [INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0805%  |  Est PnL: $+0.81  |  Conf: 53%
+
+  2. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on Bybit
+     Net: +0.0803%  |  Est PnL: $+0.80  |  Conf: 53%
+
+  3. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS
+     Net: +0.0765%  |  Est PnL: $+0.76  |  Conf: 53%
+
+  4. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  5. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bitget & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%127.0.0.1 - - [28/Apr/2026 15:05:47] "GET /data.json?t=1777368947331 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:48] "GET /data.json?t=1777368948831 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:50] "GET /data.json?t=1777368950331 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:51] "GET /data.json?t=1777368951831 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:53] "GET /data.json?t=1777368953331 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:54] "GET /data.json?t=1777368954832 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:56] "GET /data.json?t=1777368956331 HTTP/1.1" 200 -
+
+
+  6. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on GateIO & Sell on BinanceUS
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  7. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on Bitget & Sell on Bybit
+     Net: +0.0482%  |  Est PnL: $+0.48  |  Conf: 50%
+
+  8. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0429%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  9. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS
+     Net: +0.0425%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  10. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0403%  |  Est PnL: $+0.40  |  Conf: 53%
+
+  11. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Binance & Sell on BinanceUS
+     Net: +0.0402%  |  Est PnL: $+0.40  |  Conf: 52%
+
+  12. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0649%  |  Est PnL: $+0.65  |  Conf: 32%
+
+  13. [CROSS_BROKER] Simultaneous: Buy BTCUSDT on GateIO & Sell on Kraken
+     Net: +0.0335%  |  Est PnL: $+0.34  |  Conf: 53%
+
+  14. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on Kraken
+     Net: +0.0320%  |  Est PnL: $+0.32  |  Conf: 53%
+
+  15. [CROSS_BROKER] Simultaneous: Buy SEIUSDT on Bitget & Sell on Binance
+     Net: +0.0334%  |  Est PnL: $+0.33  |  Conf: 50%
+
+  16. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bybit & Sell on GateIO
+     Net: +0.0321%  |  Est PnL: $+0.32  |  Conf: 52%
+
+  17. [CROSS_BROKER] Simultaneous: Buy SEIUSDT on Bitget & Sell on Bybit
+     Net: +0.0334%  |  Est PnL: $+0.33  |  Conf: 49%
+
+  18. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on HTX
+     Net: +0.0321%  |  Est PnL: $+0.32  |  Conf: 51%
+
+  19. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on Binance
+     Net: +0.0321%  |  Est PnL: $+0.32  |  Conf: 51%
+
+  20. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on KuCoin
+     Net: +0.0321%  |  Est PnL: $+0.32  |  Conf: 51%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 19 | funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on KuCoin & Sell on BinanceUS | +0.0805% | $+0.81
+[SIGNAL] Realistic signal: Simultaneous: Buy ARBUSDT on GateIO & Sell on Bybit | +0.0803% | $+0.80
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on HTX & Sell on BinanceUS | +0.0765% | $+0.76
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on Bybit & Sell on BinanceUS | +0.0503% | $+0.50
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on Bitget & Sell on BinanceUS | +0.0503% | $+0.50
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
+[DEBUG] HTX: 19 tickers
+[DEBUG] Bybit: 19 tickers
 [DEBUG] Binance: 3577 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] KuCoin: 9 tickers
+[DEBUG] Bitget: 19 tickers
 [DEBUG] BinanceUS: 619 tickers
+[DEBUG] KuCoin: 19 tickers
 [DEBUG] Kraken: 1730 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Statistical arb: 10
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on HTX
+     Net: +0.1124%  |  Est PnL: $+1.12  |  Conf: 52%
+
+  2. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on Bybit
+     Net: +0.0642%  |  Est PnL: $+0.64  |  Conf: 52%
+
+  3. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on Bitget
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  4. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on GateIO
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  5. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0438%  |  Est PnL: $+0.44  |  Conf: 53%
+
+  6. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0429%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  7. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS
+     Net: +0.0425%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  8. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0649%  |  Est PnL: $+0.65  |  Conf: 32%
+
+  9. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on Bybit & Sell on HTX
+     Net: +0.0401%  |  Est PnL: $+0.40  |  Conf: 51%
+
+  10. [STATISTICAL] Stat: ADAUSDT/DOGEUSDT - SHORT spread
+     Net: +0.0352%  |  Est PnL: $+0.35  |  Conf: 52%
+
+  11. [CROSS_BROKER] Simultaneous: Buy BTCUSDT on GateIO & Sell on Kraken
+     Net: +0.0335%  |  Est PnL: $+0.34  |  Conf: 53%
+
+  12. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on Kraken
+     Net: +0.0329%  |  Est PnL: $+0.33  |  Conf: 53%
+
+  13. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on HTX
+     Net: +0.0332%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  14. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on Kraken
+     Net: +0.0320%  |  Est PnL: $+0.32  |  Conf: 53%
+
+  15. [CROSS_BROKER] Simultaneous: Buy SEIUSDT on Bitget & Sell on Binance
+     Net: +0.0334%  |  Est PnL: $+0.33  |  Conf: 50%
+
+  16. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on Kraken
+     Net: +0.0315%  |  Est PnL: $+0.32  |  Conf: 53%
+
+  17. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bybit & Sell on GateIO
+     Net: +0.0321%  |  Est PnL: $+0.32  |  Conf: 52%
+
+  18. [CROSS_BROKER] Simultaneous: Buy SEIUSDT on Bitget & Sell on Bybit
+     Net: +0.0334%  |  Est PnL: $+0.33  |  Conf: 49%
+
+  19. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on Binance
+     Net: +0.0321%  |  Est PnL: $+0.32  |  Conf: 51%
+
+  20. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on Bitget
+     Net: +0.0321%  |  Est PnL: $+0.32  |  Conf: 51%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 18 | funding_rate: 1 | statistical: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy ARBUSDT on GateIO & Sell on HTX | +0.1124% | $+1.12
+[SIGNAL] Realistic signal: Simultaneous: Buy ARBUSDT on GateIO & Sell on Bybit | +0.0642% | $+0.64
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on KuCoin & Sell on Bitget | +0.0503% | $+0.50
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on KuCoin & Sell on GateIO | +0.0503% | $+0.50
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS | +0.0438% | $+0.44
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
+[DEBUG] HTX: 19 tickers
 [DEBUG] Binance: 3577 tickers
+[DEBUG] Bitget: 19 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] Bybit: 19 tickers
 [DEBUG] Kraken: 1730 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[DEBUG] KuCoin: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Statistical arb: 8
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS
+     Net: +0.0477%  |  Est PnL: $+0.48  |  Conf: 53%
+
+  2. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on HTX
+     Net: +0.0481%  |  Est PnL: $+0.48  |  Conf: 51%
+
+  3. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0438%  |  Est PnL: $+0.44  |  Conf: 53%
+
+  4. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0429%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  5. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0649%  |  Est PnL: $+0.65  |  Conf: 32%
+
+  6. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on Bybit & Sell on HTX
+     Net: +0.0401%  |  Est PnL: $+0.40  |  Conf: 51%
+
+  7. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on HTX & Sell on GateIO
+     Net: +0.0385%  |  Est PnL: $+0.38  |  Conf: 52%
+
+  8. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on Kraken127.0.0.1 - - [28/Apr/2026 15:05:57] "GET /data.json?t=1777368957831 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:05:59] "GET /data.json?t=1777368959331 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:00] "GET /data.json?t=1777368960831 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:02] "GET /data.json?t=1777368962331 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:03] "GET /data.json?t=1777368963830 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:05] "GET /data.json?t=1777368965331 HTTP/1.1" 200 -
+
+     Net: +0.0368%  |  Est PnL: $+0.37  |  Conf: 53%
+
+  9. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Kraken & Sell on HTX
+     Net: +0.0390%  |  Est PnL: $+0.39  |  Conf: 48%
+
+  10. [STATISTICAL] Stat: ADAUSDT/DOGEUSDT - SHORT spread
+     Net: +0.0392%  |  Est PnL: $+0.39  |  Conf: 47%
+
+  11. [CROSS_BROKER] Simultaneous: Buy BTCUSDT on Coinbase & Sell on Kraken
+     Net: +0.0334%  |  Est PnL: $+0.33  |  Conf: 53%
+
+  12. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on Kraken
+     Net: +0.0329%  |  Est PnL: $+0.33  |  Conf: 53%
+
+  13. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on GateIO
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  14. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on KuCoin & Sell on GateIO
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  15. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on Kraken
+     Net: +0.0320%  |  Est PnL: $+0.32  |  Conf: 53%
+
+  16. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on HTX & Sell on KuCoin
+     Net: +0.0326%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  17. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bybit & Sell on GateIO
+     Net: +0.0321%  |  Est PnL: $+0.32  |  Conf: 52%
+
+  18. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 51%
+
+  19. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 51%
+
+  20. [CROSS_BROKER] Simultaneous: Buy BTCUSDT on KuCoin & Sell on Kraken
+     Net: +0.0314%  |  Est PnL: $+0.31  |  Conf: 53%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 18 | funding_rate: 1 | statistical: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS | +0.0477% | $+0.48
+[SIGNAL] Realistic signal: Simultaneous: Buy ARBUSDT on GateIO & Sell on HTX | +0.0481% | $+0.48
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS | +0.0438% | $+0.44
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on KuCoin & Sell on BinanceUS | +0.0429% | $+0.43
+[SIGNAL] Realistic signal: Funding: FETUSDT - Long Futures + Short Spot | +0.0649% | $+0.65
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] KuCoin: 9 tickers
+[DEBUG] HTX: 19 tickers
+[DEBUG] Bybit: 19 tickers
+[DEBUG] Bitget: 19 tickers
 [DEBUG] Binance: 3577 tickers
+[DEBUG] KuCoin: 19 tickers
 [DEBUG] Kraken: 1730 tickers
+[DEBUG] BinanceUS: 619 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Statistical arb: 10
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS
+     Net: +0.0539%  |  Est PnL: $+0.54  |  Conf: 53%
+
+  2. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0504%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  3. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on Bybit & Sell on HTX
+     Net: +0.0481%  |  Est PnL: $+0.48  |  Conf: 51%
+
+  4. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on HTX
+     Net: +0.0481%  |  Est PnL: $+0.48  |  Conf: 51%
+
+  5. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0429%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  6. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on Kraken
+     Net: +0.0429%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  7. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on Kraken
+     Net: +0.0394%  |  Est PnL: $+0.39  |  Conf: 53%
+
+  8. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0649%  |  Est PnL: $+0.65  |  Conf: 32%
+
+  9. [CROSS_BROKER] Simultaneous: Buy BTCUSDT on Coinbase & Sell on Kraken
+     Net: +0.0369%  |  Est PnL: $+0.37  |  Conf: 53%
+
+  10. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Kraken & Sell on HTX
+     Net: +0.0390%  |  Est PnL: $+0.39  |  Conf: 48%
+
+  11. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on HTX & Sell on KuCoin
+     Net: +0.0347%  |  Est PnL: $+0.35  |  Conf: 52%
+
+  12. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on HTX & Sell on GateIO
+     Net: +0.0337%  |  Est PnL: $+0.34  |  Conf: 52%
+
+  13. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bybit & Sell on KuCoin
+     Net: +0.0331%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  14. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bitget & Sell on KuCoin
+     Net: +0.0331%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  15. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on GateIO
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  16. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on KuCoin & Sell on GateIO
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  17. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bybit & Sell on GateIO
+     Net: +0.0321%  |  Est PnL: $+0.32  |  Conf: 52%
+
+  18. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bitget & Sell on GateIO
+     Net: +0.0321%  |  Est PnL: $+0.32  |  Conf: 52%
+
+  19. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 51%
+
+  20. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 51%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 19 | funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS | +0.0539% | $+0.54
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS | +0.0504% | $+0.50
+[SIGNAL] Realistic signal: Simultaneous: Buy ARBUSDT on Bybit & Sell on HTX | +0.0481% | $+0.48
+[SIGNAL] Realistic signal: Simultaneous: Buy ARBUSDT on GateIO & Sell on HTX | +0.0481% | $+0.48
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on KuCoin & Sell on BinanceUS | +0.0429% | $+0.43
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
+[DEBUG] Bybit: 19 tickers
 [DEBUG] Binance: 3577 tickers
+[DEBUG] Bitget: 19 tickers
+[DEBUG] BinanceUS: 619 tickers
+[DEBUG] KuCoin: 19 tickers
+[DEBUG] HTX: 19 tickers
 [DEBUG] Kraken: 1730 tickers
+[DEBUG] GateIO: 19 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Statistical arb: 9
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS
+     Net: +0.0539%  |  Est PnL: $+0.54  |  Conf: 53%
+
+  2. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0504%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  3. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on HTX
+     Net: +0.0481%  |  Est PnL: $+0.48  |  Conf: 51%
+
+  4. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0429%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  5. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on Kraken
+     Net: +0.0429%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  6. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on Kraken
+     Net: +0.0394%  |  Est PnL: $+0.39  |  Conf: 53%
+
+  7. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0649%  |  Est PnL: $+0.65  |  Conf: 32%
+
+  8. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on Bybit & Sell on HTX
+     Net: +0.0401%  |  Est PnL: $+0.40  |  Conf: 51%
+
+  9. [CROSS_BROKER] Simultaneous: Buy INJUSDT on Kraken & Sell on HTX
+     Net: +0.0390%  |  Est PnL: $+0.39  |  Conf: 48%
+
+  10. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bybit & Sell on KuCoin
+     Net: +0.0331%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  11. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bitget & Sell on KuCoin127.0.0.1 - - [28/Apr/2026 15:06:06] "GET /data.json?t=1777368966831 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:08] "GET /data.json?t=1777368968331 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:09] "POST /api/scanner/toggle HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:09] "GET /data.json?t=1777368969279 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:09] "GET /data.json?t=1777368969830 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:10] "POST /api/scanner/toggle HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:10] "GET /data.json?t=1777368970329 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:11] "GET /data.json?t=1777368971330 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:11] "POST /api/scanner/toggle HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:11] "GET /data.json?t=1777368971963 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:12] "POST /api/scanner/toggle HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:12] "GET /data.json?t=1777368972746 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:12] "GET /data.json?t=1777368972831 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:14] "GET /data.json?t=1777368974330 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:15] "GET /data.json?t=1777368975830 HTTP/1.1" 200 -
+
+     Net: +0.0331%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  12. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on HTX & Sell on KuCoin
+     Net: +0.0331%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  13. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on Kraken
+     Net: +0.0320%  |  Est PnL: $+0.32  |  Conf: 53%
+
+  14. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on Bitget
+     Net: +0.0315%  |  Est PnL: $+0.32  |  Conf: 53%
+
+  15. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 51%
+
+  16. [CROSS_BROKER] Simultaneous: Buy AVAXUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0327%  |  Est PnL: $+0.33  |  Conf: 51%
+
+  17. [CROSS_BROKER] Simultaneous: Buy BTCUSDT on Coinbase & Sell on BinanceUS
+     Net: +0.0298%  |  Est PnL: $+0.30  |  Conf: 53%
+
+  18. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on HTX & Sell on BinanceUS
+     Net: +0.0298%  |  Est PnL: $+0.30  |  Conf: 53%
+
+  19. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on GateIO & Sell on BinanceUS
+     Net: +0.0298%  |  Est PnL: $+0.30  |  Conf: 53%
+
+  20. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on Bitget
+     Net: +0.0280%  |  Est PnL: $+0.28  |  Conf: 52%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 19 | funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS | +0.0539% | $+0.54
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS | +0.0504% | $+0.50
+[SIGNAL] Realistic signal: Simultaneous: Buy ARBUSDT on GateIO & Sell on HTX | +0.0481% | $+0.48
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on KuCoin & Sell on BinanceUS | +0.0429% | $+0.43
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on Coinbase & Sell on Kraken | +0.0429% | $+0.43
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] Bybit: 9 tickers
+[DEBUG] HTX: 19 tickers
 [DEBUG] Binance: 3577 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] KuCoin: 9 tickers
+[DEBUG] Bitget: 19 tickers
+[DEBUG] Bybit: 19 tickers
 [DEBUG] BinanceUS: 619 tickers
 [DEBUG] Kraken: 1730 tickers
-[DEBUG] HTX: 9 tickers
+[DEBUG] KuCoin: 19 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Statistical arb: 9
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on Bybit
+     Net: +0.0562%  |  Est PnL: $+0.56  |  Conf: 52%
+
+  2. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0504%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  3. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS
+     Net: +0.0504%  |  Est PnL: $+0.50  |  Conf: 53%
+
+  4. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on HTX & Sell on Binance
+     Net: +0.0493%  |  Est PnL: $+0.49  |  Conf: 53%
+
+  5. [CROSS_BROKER] Simultaneous: Buy ARBUSDT on GateIO & Sell on HTX
+     Net: +0.0481%  |  Est PnL: $+0.48  |  Conf: 51%
+
+  6. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0429%  |  Est PnL: $+0.43  |  Conf: 53%
+
+  7. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on Binance
+     Net: +0.0403%  |  Est PnL: $+0.40  |  Conf: 52%
+
+  8. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on GateIO & Sell on Binance
+     Net: +0.0403%  |  Est PnL: $+0.40  |  Conf: 52%
+
+  9. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on Kraken
+     Net: +0.0394%  |  Est PnL: $+0.39  |  Conf: 53%
+
+  10. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on Kraken
+     Net: +0.0394%  |  Est PnL: $+0.39  |  Conf: 53%
+
+  11. [FUNDING_RATE] Funding: FETUSDT - Long Futures + Short Spot
+     Net: +0.0649%  |  Est PnL: $+0.65  |  Conf: 32%
+
+  12. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on HTX & Sell on Bitget
+     Net: +0.0393%  |  Est PnL: $+0.39  |  Conf: 52%
+
+  13. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on HTX & Sell on Bybit
+     Net: +0.0393%  |  Est PnL: $+0.39  |  Conf: 52%
+
+  14. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on HTX & Sell on KuCoin
+     Net: +0.0331%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  15. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bitget & Sell on KuCoin
+     Net: +0.0331%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  16. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on Bybit & Sell on KuCoin
+     Net: +0.0331%  |  Est PnL: $+0.33  |  Conf: 52%
+
+  17. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on Kraken
+     Net: +0.0320%  |  Est PnL: $+0.32  |  Conf: 53%
+
+  18. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on Bitget
+     Net: +0.0302%  |  Est PnL: $+0.30  |  Conf: 52%
+
+  19. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on Bybit
+     Net: +0.0302%  |  Est PnL: $+0.30  |  Conf: 52%
+
+  20. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on GateIO & Sell on Bitget
+     Net: +0.0302%  |  Est PnL: $+0.30  |  Conf: 52%
 
 --------------------------------------------------------------------------------
-  Summary: funding_rate: 1
+  Summary: cross_broker: 19 | funding_rate: 1
 ================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
+[SIGNAL] Realistic signal: Simultaneous: Buy ARBUSDT on GateIO & Sell on Bybit | +0.0562% | $+0.56
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS | +0.0504% | $+0.50
+[SIGNAL] Realistic signal: Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS | +0.0504% | $+0.50
+[SIGNAL] Realistic signal: Simultaneous: Buy DOGEUSDT on HTX & Sell on Binance | +0.0493% | $+0.49
+[SIGNAL] Realistic signal: Simultaneous: Buy ARBUSDT on GateIO & Sell on HTX | +0.0481% | $+0.48
 [INFO] === Scanning all arbitrage strategies ===
-[DEBUG] Bybit: 9 tickers
+[DEBUG] Bybit: 19 tickers
+[DEBUG] Bitget: 19 tickers
 [DEBUG] Binance: 3577 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] HTX: 9 tickers
+[DEBUG] KuCoin: 19 tickers
 [DEBUG] BinanceUS: 619 tickers
-[DEBUG] KuCoin: 9 tickers
 [DEBUG] Kraken: 1730 tickers
+[DEBUG] HTX: 19 tickers
 [DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
+[DEBUG] GateIO: 19 tickers
+[INFO]   Multi-hop cycles (Triangular): 25
+[INFO]   Cross-exchange (Simultaneous): 20
 [INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+[INFO]   Statistical arb: 8
+[INFO]   Funding rate arb: 7
 
 ================================================================================
   TOP REALISTIC ARBITRAGE OPPORTUNITIES
 ================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  1. [STATISTICAL] Stat: ADAUSDT/DOGEUSDT - SHORT spread
+     Net: +0.0778%  |  Est PnL: $+0.78  |  Conf: 59%
 
---------------------------------------------------------------------------------
-  Summary: funding_rate: 1
-================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
-[INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] Binance: 3577 tickers
-[DEBUG] Kraken: 1730 tickers
-[DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0127.0.0.1 - - [28/Apr/2026 14:36:28] "GET /data.json?t=1777367188844 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:30] "GET /data.json?t=1777367190345 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:31] "GET /data.json?t=1777367191846 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:33] "GET /data.json?t=1777367193346 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:33] "[36mGET / HTTP/1.1[0m" 304 -
-127.0.0.1 - - [28/Apr/2026 14:36:33] "[36mGET /app.js HTTP/1.1[0m" 304 -
-127.0.0.1 - - [28/Apr/2026 14:36:33] "[36mGET /styles.css HTTP/1.1[0m" 304 -
-127.0.0.1 - - [28/Apr/2026 14:36:33] "GET /data.json?t=1777367193513 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:35] "GET /data.json?t=1777367195014 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:36] "GET /data.json?t=1777367196514 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:38] "GET /data.json?t=1777367198014 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:39] "GET /data.json?t=1777367199514 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:41] "GET /data.json?t=1777367201014 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:42] "GET /data.json?t=1777367202514 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:44] "GET /data.json?t=1777367204014 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:45] "GET /data.json?t=1777367205514 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:47] "GET /data.json?t=1777367207014 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:48] "GET /data.json?t=1777367208514 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:50] "GET /data.json?t=1777367210014 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:51] "GET /data.json?t=1777367211514 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:53] "GET /data.json?t=1777367213014 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:54] "GET /data.json?t=1777367214514 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:56] "GET /data.json?t=1777367216013 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:57] "GET /data.json?t=1777367217793 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:36:59] "GET /data.json?t=1777367219793 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:00] "GET /data.json?t=1777367220793 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:02] "GET /data.json?t=1777367222792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:03] "GET /data.json?t=1777367223793 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:05] "GET /data.json?t=1777367225793 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:06] "GET /data.json?t=1777367226793 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:08] "GET /data.json?t=1777367228792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:09] "GET /data.json?t=1777367229792 HTTP/1.1" 200 -
+  2. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on Bitget
+     Net: +0.0806%  |  Est PnL: $+0.81  |  Conf: 53%
 
-[INFO]   Cross-exchange (Simultaneous): 0
-[INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+  3. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bybit & Sell on Bitget
+     Net: +0.0705%  |  Est PnL: $+0.70  |  Conf: 53%
 
-================================================================================
-  TOP REALISTIC ARBITRAGE OPPORTUNITIES
-================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  4. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on GateIO
+     Net: +0.0604%  |  Est PnL: $+0.60  |  Conf: 53%
 
---------------------------------------------------------------------------------
-  Summary: funding_rate: 1
-================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
-[INFO] === Scanning all arbitrage strategies ===
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] Kraken: 1730 tickers
-[DEBUG] Binance: 3577 tickers
-[DEBUG] HTX: 9 tickers
-[DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
-[INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+  5. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on KuCoin & Sell on HTX
+     Net: +0.0584%  |  Est PnL: $+0.58  |  Conf: 53%
 
-================================================================================
-  TOP REALISTIC ARBITRAGE OPPORTUNITIES
-================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  6. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bybit & Sell on GateIO
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%
 
---------------------------------------------------------------------------------
-  Summary: funding_rate: 1
-================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
-[INFO] === Scanning all arbitrage strategies ===
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Binance: 3577 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] Kraken: 1730 tickers
-[DEBUG] Coinbase: 6 tickers
-[DEBUG] HTX: 9 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
-[INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+  7. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Binance & Sell on Bitget
+     Net: +0.0503%  |  Est PnL: $+0.50  |  Conf: 53%
 
-================================================================================
-  TOP REALISTIC ARBITRAGE OPPORTUNITIES
-================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  8. [CROSS_BROKER] Simultaneous: Buy DOGEUSDT on Bybit & Sell on HTX
+     Net: +0.0483%  |  Est PnL: $+0.48  |  Conf: 53%
 
---------------------------------------------------------------------------------
-  Summary: funding_rate: 1
-================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
-[INFO] === Scanning all arbitrage strategies ===
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Binance: 3577 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] HTX: 9 tickers
-[DEBUG] Kraken: 1730 tickers
-[DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
-[INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+  9. [CROSS_BROKER] Simultaneous: Buy ADAUSDT on HTX & Sell on Bitget
+     Net: +0.0439%  |  Est PnL: $+0.44  |  Conf: 52%
 
-================================================================================
-  TOP REALISTIC ARBITRAGE OPPORTUNITIES
-================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  10. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on KuCoin & Sell on BinanceUS
+     Net: +0.0429%  |  Est PnL: $+0.43  |  Conf: 53%
 
---------------------------------------------------------------------------------
-  Summary: funding_rate: 1
-================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
-[INFO] === Scanning all arbitrage strategies ===
-[DEBUG] Bitget: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] Kraken: 1730 tickers
-[DEBUG] Binance: 3577 tickers
-[DEBUG] HTX: 9 tickers
-[DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
-[INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
+  11. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Bybit & Sell on BinanceUS
+     Net: +0.0403%  |  Est PnL: $+0.40  |  Conf: 53%
 
-================================================================================
-  TOP REALISTIC ARBITRAGE OPPORTUNITIES
-================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
+  12. [CROSS_BROKER] Simultaneous: Buy ETHUSDT on Coinbase & Sell on BinanceUS
+     Net: +0.0399%  |  Est PnL: $+0.40  |  Conf: 53%
 
---------------------------------------------------------------------------------
-  Summary: funding_rate: 1
-================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
-[INFO] === Scanning all arbitrage strategies ===
-[DEBUG] Bitget: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] Binance: 3577 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] Kraken: 1730 tickers
-[DEBUG] HTX: 9 tickers
-[DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
-[INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
-
-================================================================================
-  TOP REALISTIC ARBITRAGE OPPORTUNITIES
-================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
-
---------------------------------------------------------------------------------
-  Summary: funding_rate: 1
-================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
-[INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] Binance: 3577 tickers
-[DEBUG] Kraken: 1730 tickers
-[DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
-[INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
-
-================================================================================
-  TOP REALISTIC ARBITRAGE OPPORTUNITIES
-================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
-
---------------------------------------------------------------------------------
-  Summary: funding_rate: 1
-================================================================================
-[SIGNAL] Realistic signal: Funding: ETHUSDT - Long Futures + Short Spot | +0.0121% | $+0.12
-[INFO] === Scanning all arbitrage strategies ===
-[DEBUG] HTX: 9 tickers
-[DEBUG] Bybit: 9 tickers
-[DEBUG] Binance: 3577 tickers
-[DEBUG] Bitget: 9 tickers
-[DEBUG] BinanceUS: 619 tickers
-[DEBUG] Kraken: 1730 tickers
-[DEBUG] KuCoin: 9 tickers
-[DEBUG] Coinbase: 6 tickers
-[DEBUG] GateIO: 9 tickers
-[INFO]   Multi-hop cycles (Triangular): 0
-[INFO]   Cross-exchange (Simultaneous): 0
-[INFO]   Spatial Arbitrage (Transfer): 0
-[INFO]   Statistical arb: 0
-[INFO]   Funding rate arb: 1
-
-================================================================================
-  TOP REALISTIC ARBITRAGE OPPORTUNITIES
-================================================================================
-  1. [FUNDING_RATE] Funding: ETHUSDT - Long Futures + Short Spot
-     Net: +0.0121%  |  Est PnL: $+0.12  |  Conf: 10%
-
---------------------------------------------------------------------------------
-  Summary: funding_rate: 1
-================================================================================127.0.0.1 - - [28/Apr/2026 14:37:11] "GET /data.json?t=1777367231792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:12] "GET /data.json?t=1777367232793 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:14] "GET /data.json?t=1777367234792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:15] "GET /data.json?t=1777367235792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:17] "GET /data.json?t=1777367237792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:18] "GET /data.json?t=1777367238792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:20] "GET /data.json?t=1777367240792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:21] "GET /data.json?t=1777367241792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:23] "GET /data.json?t=1777367243792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:24] "GET /data.json?t=1777367244792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:26] "GET /data.json?t=1777367246792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:27] "GET /data.json?t=1777367247792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:29] "GET /data.json?t=1777367249793 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:30] "GET /data.json?t=1777367250792 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Apr/2026 14:37:32] "GET /data.json?t=1777367252791 HTTP/1.1" 200 -
+  13. [CROSS_BROKER] Simultaneous: Buy BNBUSDT on HTX & Sell on KuCoin
+     Net: +0.0392%  |  Est PnL: $+0.39  |  Conf: 53%127.0.0.1 - - [28/Apr/2026 15:06:17] "GET /data.json?t=1777368977330 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:18] "GET /data.json?t=1777368978830 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:20] "GET /data.json?t=1777368980330 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 15:06:21] "GET /data.json?t=1777368981830 HTTP/1.1" 200 -

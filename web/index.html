@@ -20,16 +20,7 @@
             </div>
         </header>
 
-        <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
-            <div class="glass-panel" style="flex: 1; height: auto; padding: 1rem 2rem;">
-                <div style="display: flex; justify-content: space-around; font-weight: bold; color: var(--neon-blue);">
-                    <div>Triangular: <span id="count-triangular" style="color: var(--text-primary);">0</span></div>
-                    <div>Cross-Broker/Spatial: <span id="count-cross" style="color: var(--text-primary);">0</span></div>
-                    <div>Statistical: <span id="count-stat" style="color: var(--text-primary);">0</span></div>
-                    <div>Funding Rate: <span id="count-funding" style="color: var(--text-primary);">0</span></div>
-                </div>
-            </div>
-        </div>
+
 
         <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
             <div class="glass-panel" style="flex: 2; height: 400px; padding: 1rem; position: relative;">
@@ -45,8 +36,14 @@
         </div>
 
         <div class="grid-layout">
-            <div class="glass-panel">
-                <h2>Live Opportunities Found</h2>
+            <div class="glass-panel" style="display: flex; flex-direction: column;">
+                <div style="display: flex; border-bottom: 1px solid var(--glass-border); margin-bottom: 1rem;">
+                    <div class="filter-tab active" onclick="setFilter('all')" id="filter-all">All (<span id="count-all" style="color: var(--text-primary);">0</span>)</div>
+                    <div class="filter-tab" onclick="setFilter('triangular')" id="filter-triangular">Triangular (<span id="count-triangular" style="color: var(--text-primary);">0</span>)</div>
+                    <div class="filter-tab" onclick="setFilter('cross')" id="filter-cross">Cross-Broker (<span id="count-cross" style="color: var(--text-primary);">0</span>)</div>
+                    <div class="filter-tab" onclick="setFilter('statistical')" id="filter-statistical">Statistical (<span id="count-stat" style="color: var(--text-primary);">0</span>)</div>
+                    <div class="filter-tab" onclick="setFilter('funding_rate')" id="filter-funding">Funding (<span id="count-funding" style="color: var(--text-primary);">0</span>)</div>
+                </div>
                 <div class="table-container">
                     <table>
                         <thead>
